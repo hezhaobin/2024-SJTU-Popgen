@@ -189,6 +189,9 @@
 .reveal em {
   font-style: italic;
 }
+.reveal li {
+  margin-bottom: 0.2em;
+}
 .reveal ol,
 .reveal dl,
 .reveal ul {
