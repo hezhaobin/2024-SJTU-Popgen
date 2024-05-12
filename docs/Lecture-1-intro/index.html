@@ -846,11 +846,153 @@ graph TD
 - &shy;<!-- .element: class="fragment" data-fragment-index="4" --><mark>Where does selection operate in the left diagram</mark>?
 
 </split>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## How natural selection alters allele frequency?
-- In a population of
+- Consider a locus A with three genotypes, A/A, A/a, and a/a in a population. The initial allele frequencies are `$p=0.1, q=0.9$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->A is a favored dominant allele
+  | Genotype | A/A | A/a | a/a |
+  |-|-|-|-|
+  | Average number of offspring (W) | 10 | 10 | 5 |
+  | Relative fitness (w) | 1.0 | 1.0 | 0.5 |
+  | Genotype frequency |  |  |  |
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## How natural selection alters allele frequency?
+- A is a favored dominant allele
+  | | A/A | A/a | a/a |
+  |-|-|-|-|
+  |Average number of offspring (W) | 10 | 10 | 5 |
+  | Relative fitness (w) | 1.0 | 1.0 | 0.5 |
+  | Genotype frequency | 0.01 | 0.18  | 0.81  |
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->The relative contribution of each genotype to the gene pool is determined by **the product of its fitness and frequency**
+  | Genotype | A/A | A/a | a/a | Sum |
+  |-|-|-|-|-|
+  | Relative contribution | 1 x 0.01 | 1 x 0.18 | 0.5 x 0.81 |
+  | | = 0.01 | = 0.18 | = 0.405 | 0.595 |
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## How natural selection alters allele frequency?
+- The relative contribution of each genotype to the gene pool is determined by **the product of its fitness and frequency**
+  | Genotype | A/A | A/a | a/a | Sum |
+  |-|-|-|-|-|
+  | Relative contribution | 0.01 | 0.18 | 0.405 | 0.595 |
+  | Genotype frequency | 0.02 | 0.30 | 0.68 | 1.0 |
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Now, let's use the genotype frequency to calculate the allele frequency, and then use that to calculate the expected genotype frequency in the next generation of zygotes under HWE
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->`$p'=?$` how much did `$p$` change over one round of selection?
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->`$P_{AA}=?$`, etc.
+</div>
+
+<aside class="notes"><ol>
+<li><code>$p&#39;=0.02+0.15=0.17$</code></li>
+<li><code>$P_{AA}=0.17^2=0.0289, P_{Aa}=2\times0.17\times0.83=0.2822, P_{aa}=0.83^2=0.6889$</code></li>
+</ol>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## How natural selection alters allele frequency?
+More generally
+
+define `$\bar{w}=p^2w_{A/A}+2pqw_{A/a}+q^2w_{a/a}$` is the mean relative fitness of the population
+
+then, `$p'=\frac{p^2w_{A/A}+\frac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\frac{pw_{A/A}+qw_{A/a}}{\bar{w}}$`
+
+<p class="fragment"> we define `$w_A=pw_{A/A}+qw_{A/a}$` as allelic fitness, or mean fitness of allele A </p>
+
+<p class="fragment"> `$\Delta p=p'-p=p\frac{w_A}{\bar{w}}-p=\frac{p(w_A-\bar{w})}{\bar{w}}$` </p>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Forms of selection
+1. Directional selection
+	- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Positive selection
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Purifying (negative) selection
+1. &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Balancing selection
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->if the heterozygous class has higher fitness than either homozygous ones, selection would favor the **maintenance of both alleles**.
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->can you think of example scenarios for balancing selection?
+	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->are there other types of selection that can **maintain genetic diversity** rather than **eliminating it**?
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Signatures of positive selection
+<img src="10-asset/11-attachment/20240509-IntroGenetAnal-18-22.png" alt="" style="object-fit: scale-down">
+
+
+<div class="fragment fade-out has-light-background" style="background-color: white; position: absolute; left: 50%; top: 30%; height: 62%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="footnotes" role="doc-endnotes">
+<ol>
+<li id="fn:1" role="doc-endnote" class="footnote"><p>
+
+Introduction to Genetic Analysis, ed 11, Fig. 18-22
+
+</p></li></ol>
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Signatures of positive selection
+- By driving the favored allele to fixation "very fast", positive selection causes a selective sweep that ends up
+	- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->also fix linked sites or drive the linked allele to high frequency
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->hence removing genetic variation from the population
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->creates LD
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->Note that this signature is **transient**.  What does this mean, why?
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Use selective sweep signature to infer positive selection
+
+<img src="10-asset/11-attachment/20240509-IntroGenetAnal-18-23.png" alt="" style="width: 600px; object-fit: fill">
+
+
+
+
+<div class="footnotes" role="doc-endnotes">
+<ol>
+<li id="fn:1" role="doc-endnote" class="footnote"><p>
+
+Introduction to Genetic Analysis, ed 11, Fig. 18-23
+
+</p></li></ol>
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="10-asset/11-attachment/20240509-IntroGenetAnal-table-8-6.png" alt="" style="object-fit: scale-down">
+
+
+
+
+<div class="footnotes" role="doc-endnotes">
+<ol>
+<li id="fn:1" role="doc-endnote" class="footnote"><p>
+
+Introduction to Genetic Analysis, ed 11, Table 18-6
+
+</p></li></ol>
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="10-asset/11-attachment/20240509-IntroGenetAnal-18-24.png" alt="" style="object-fit: scale-down">
+
+
+
+
+<div class="footnotes" role="doc-endnotes">
+<ol>
+<li id="fn:1" role="doc-endnote" class="footnote"><p>
+
+Introduction to Genetic Analysis, ed 11, Fig. 18-24
+
+</p></li></ol>
+</div>
 </div></script></section></div>
     </div>
 

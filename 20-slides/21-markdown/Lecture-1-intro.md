@@ -492,5 +492,103 @@ graph TD
 </split>
 
 ---
+<!-- .slide: data-auto-animate -->
 ## How natural selection alters allele frequency?
-- In a population of 
+- Consider a locus A with three genotypes, A/A, A/a, and a/a in a population. The initial allele frequencies are $p=0.1, q=0.9$
++ A is a favored dominant allele
+  | Genotype | A/A | A/a | a/a |
+  |-|-|-|-|
+  | Average number of offspring (W) | 10 | 10 | 5 |
+  | Relative fitness (w) | 1.0 | 1.0 | 0.5 |
+  | Genotype frequency |  |  |  |
+
+---
+<!-- .slide: data-auto-animate -->
+## How natural selection alters allele frequency?
+- A is a favored dominant allele
+  | | A/A | A/a | a/a |
+  |-|-|-|-|
+  |Average number of offspring (W) | 10 | 10 | 5 |
+  | Relative fitness (w) | 1.0 | 1.0 | 0.5 |
+  | Genotype frequency | 0.01 | 0.18  | 0.81  |
++ The relative contribution of each genotype to the gene pool is determined by **the product of its fitness and frequency**
+  | Genotype | A/A | A/a | a/a | Sum |
+  |-|-|-|-|-|
+  | Relative contribution | 1 x 0.01 | 1 x 0.18 | 0.5 x 0.81 |
+  | | = 0.01 | = 0.18 | = 0.405 | 0.595 |
+
+---
+<!-- .slide: data-auto-animate -->
+## How natural selection alters allele frequency?
+- The relative contribution of each genotype to the gene pool is determined by **the product of its fitness and frequency**
+  | Genotype | A/A | A/a | a/a | Sum |
+  |-|-|-|-|-|
+  | Relative contribution | 0.01 | 0.18 | 0.405 | 0.595 |
+  | Genotype frequency | 0.02 | 0.30 | 0.68 | 1.0 |
++ Now, let's use the genotype frequency to calculate the allele frequency, and then use that to calculate the expected genotype frequency in the next generation of zygotes under HWE
+	+ $p'=?$ how much did $p$ change over one round of selection?
+	+ $P_{AA}=?$, etc.
+
+note:
+1. $p'=0.02+0.15=0.17$
+2. $P_{AA}=0.17^2=0.0289, P_{Aa}=2\times0.17\times0.83=0.2822, P_{aa}=0.83^2=0.6889$
+
+---
+<!-- .slide: data-auto-animate -->
+## How natural selection alters allele frequency?
+More generally
+
+define $\bar{w}=p^2w_{A/A}+2pqw_{A/a}+q^2w_{a/a}$ is the mean relative fitness of the population
+
+then, $p'=\frac{p^2w_{A/A}+\frac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\frac{pw_{A/A}+qw_{A/a}}{\bar{w}}$
+
+<p class="fragment"> we define $w_A=pw_{A/A}+qw_{A/a}$ as allelic fitness, or mean fitness of allele A </p>
+
+<p class="fragment"> $\Delta p=p'-p=p\frac{w_A}{\bar{w}}-p=\frac{p(w_A-\bar{w})}{\bar{w}}$ </p>
+
+---
+<!-- .slide: data-auto-animate -->
+## Forms of selection
+1. Directional selection
+	+ Positive selection
+	+ Purifying (negative) selection
+2) Balancing selection
+	+ if the heterozygous class has higher fitness than either homozygous ones, selection would favor the **maintenance of both alleles**.
+	+ can you think of example scenarios for balancing selection?
+	+ are there other types of selection that can **maintain genetic diversity** rather than **eliminating it**?
+
+---
+## Signatures of positive selection
+![[20240509-IntroGenetAnal-18-22.png]]
+
+<grid class="fragment fade-out" drag="45 62" drop="50 30" bg="white">
+</grid>
+
+[^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-22
+---
+<!-- .slide: data-auto-animate -->
+## Signatures of positive selection
+- By driving the favored allele to fixation "very fast", positive selection causes a selective sweep that ends up
+	+ also fix linked sites or drive the linked allele to high frequency
+	+ hence removing genetic variation from the population
+	+ creates LD
++ Note that this signature is **transient**.  What does this mean, why?
+
+---
+## Use selective sweep signature to infer positive selection
+
+![[20240509-IntroGenetAnal-18-23.png|600x]]
+
+[^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-23
+
+---
+![[20240509-IntroGenetAnal-table-8-6.png]]
+
+[^1]: Introduction to Genetic Analysis, ed 11, Table 18-6
+
+---
+![[20240509-IntroGenetAnal-18-24.png]]
+
+[^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-24
+
+---
