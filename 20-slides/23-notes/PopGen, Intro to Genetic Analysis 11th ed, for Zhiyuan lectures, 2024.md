@@ -3,6 +3,15 @@ tags:
   - popgen
 ---
 See [[2024 JTU Zhiyuan College Pop Gen]] for notes on the course. This file contains my reading notes for the lectures
+# 2024-05-15, first discussion
+- 唐卓皓, intro
+	- 降维
+- 焦颜奕, Fig. 1a, b
+- 高哲，SFig. 1/2
+- 余沈栋，Fig. 1c
+- 王逸鳞，Fig. 2b
+- 姚承远，SFig. 4
+- 袁业衡，SFig. 5
 # 2024-01-28, Genetic Analysis, Ch18
 > [!note] 
 > Additional references other than the textbook are listed below each section 

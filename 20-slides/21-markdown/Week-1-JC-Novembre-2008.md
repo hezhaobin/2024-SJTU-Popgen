@@ -29,8 +29,7 @@ note:
 
 ---
 note: 
-> [!question]
-> Conversely, why would people's geographical location provide "an efficient two-dimensional summary" of genetic variation in Europeans?
+Conversely, why would people's geographical location provide "an efficient two-dimensional summary" of genetic variation in Europeans?
 
 ---
 > [!quote]

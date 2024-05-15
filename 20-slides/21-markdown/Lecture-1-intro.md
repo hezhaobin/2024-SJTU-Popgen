@@ -271,6 +271,15 @@ graph TD
 [^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-13
 
 ---
+## Review of Mon lecture
+> [!Question]
+> 1. Describe Hardy-Weinberg Equilibrium according to your understanding. What does it concern and what are its key assumptions?
+> 2. Describe two ways for measuring the level of genetic variation.
+
+note: $\pi = \sum_{i=1}^{n}(1-\sum_{j=1}^{m}(p_{ij}^2))$ 
+
+
+---
 ## Level of genetic variation vary across species
 ![[20240505-Lefler-2012-fig1.png]][^1]
 [^1]: Leffler et al. 2012. “Revisiting an Old Riddle: What Determines Genetic Diversity Levels within Species?” _PLoS Biology_ 10 (9): e1001388. [https://doi.org/10.1371/journal.pbio.1001388](https://doi.org/10.1371/journal.pbio.1001388).
