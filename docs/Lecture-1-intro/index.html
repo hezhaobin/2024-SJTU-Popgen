@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="plugin/customcontrols/style.css">
 	<link rel="stylesheet" href="plugin/chalkboard/style.css">
 
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
 
 
     <script defer src="dist/fontawesome/all.min.js"></script>
@@ -1038,6 +1039,7 @@ Introduction to Genetic Analysis, ed 11, Fig. 18-24
 	<script src="plugin/menu/menu.js"></script>
 	<script src="plugin/customcontrols/plugin.js"></script>
 	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
 
     <script>
       function extend() {
@@ -1094,6 +1096,7 @@ Introduction to Genetic Analysis, ed 11, Fig. 18-24
 		  RevealChart,
 		  RevealCustomControls,
 		  RevealMenu,
+	      RevealPointer,
 		  RevealChalkboard, 
         ],
 
@@ -1135,7 +1138,7 @@ Introduction to Genetic Analysis, ed 11, Fig. 18-24
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":true,"progress":true,"slideNumber":false,"transition":"fade","transitionSpeed":"default"}, queryOptions);
+      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":true,"progress":true,"slideNumber":true,"transition":"fade","transitionSpeed":"default"}, queryOptions);
     </script>
 
     <script>
