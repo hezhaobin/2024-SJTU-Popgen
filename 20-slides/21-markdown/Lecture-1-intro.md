@@ -275,6 +275,7 @@ graph TD
 > [!Question]
 > 1. Describe Hardy-Weinberg Equilibrium according to your understanding. What does it concern and what are its key assumptions?
 > 2. Describe two ways for measuring the level of genetic variation.
+> 3. Draw a cartoon haplotype network to describe the two hypotheses in the journal club paper (<span style="color:yellowgreen">*to what extent populations within continental regions exist as discrete genetic clusters versus as a genetic continuum*</span>)
 
 note: $\pi = \sum_{i=1}^{n}(1-\sum_{j=1}^{m}(p_{ij}^2))$ 
 
@@ -332,7 +333,7 @@ note: $\pi = \sum_{i=1}^{n}(1-\sum_{j=1}^{m}(p_{ij}^2))$
 <split even>
 ![[20240509-IntroGenetAnal-18-17.png|500x]]
 
-- Define LD as the difference (D) between the observed and expected frequencies
++ Define LD as the difference (D) between the observed and expected frequencies
 	+ $D=P_{AB}-p_A p_B$
 + ==Exercise==: calculate D for the two scenarios on the left
 
@@ -358,6 +359,8 @@ note: $\pi = \sum_{i=1}^{n}(1-\sum_{j=1}^{m}(p_{ij}^2))$
 </split>
 
 [^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-17
+
+note: - An allele in the G6PD gene called $A^-$ leads to strongly reduced enzyme activity, and individuals who carry this allele develop hemolytic anemia. However, this allele also confers a 50 percent reduction in the risk of severe malaria in carriers.
 
 ---
 <!-- .slide: data-auto-animate -->
