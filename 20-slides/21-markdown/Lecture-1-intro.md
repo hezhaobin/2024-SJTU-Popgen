@@ -506,6 +506,18 @@ graph TD
 ---
 <!-- .slide: data-auto-animate -->
 ## How natural selection alters allele frequency?
+<split left="2" right="1">
+![[20240520-Coop-fig10.1.png|400]]
+
+> Figure 10.1: The rapid evolution of drug-resistant SHIV. The viral load of SHIV in the blood of a macaque (black line), the frequency of a drug resistance mutation (red line). Data from Feder et al. (2017).
+
+</split>
+
+[^1]: Graham Coop, Population and Quantitative Genetics, v1.2, 2020 https://github.com/cooplab/popgen-notes/releases/tag/v1.1
+
+---
+<!-- .slide: data-auto-animate -->
+## How natural selection alters allele frequency?
 - Consider a locus A with three genotypes, A/A, A/a, and a/a in a population. The initial allele frequencies are $p=0.1, q=0.9$
 + A is a favored dominant allele
   | Genotype | A/A | A/a | a/a |
