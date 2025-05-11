@@ -5,19 +5,16 @@
 ---
 
 <!-- .slide: data-auto-animate -->
-## What is biological evolution?
+## Population genetics
+- A ==population== is a group of individuals from the same species that lives in the same geographic area and that actually or potentially interbreeds.
+- Population genetics studies the genetic variation in populations and how it changes over time
 
 ---
 
 <!-- .slide: data-auto-animate -->
-## What is biological evolution?
+## Why study population genetics?
 
 Biological evolution is the change over time in the **genetic composition of a population**, which changes due to the birth and death of individuals or the migration of individuals in or out of the population.
-
----
-
-<!-- .slide: data-auto-animate -->
-## What are the forces driving biological evolution?
 
 ---
 
@@ -28,7 +25,13 @@ Biological evolution is the change over time in the **genetic composition of a p
 - migration <!-- element class="fragment" -->
 
 ---
-# Measuring genetic variation
+
+<!-- .slide: data-auto-animate -->
+## What are the forces driving biological evolution?
+- genetic drift
+- natural selection
+- migration
+- ...
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -47,43 +50,83 @@ Biological evolution is the change over time in the **genetic composition of a p
 ---
 ### How do you draw the network (b) based on the alignment (a)?
 
-![[20240502-IntroGenetAnal-18-4.png|800]][^1]
+![[20240502-IntroGenetAnal-18-4.png|800]]<%? footnotes %>
 [^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-4
 
 
-%%comment on the different elements in the network map, e.g., circles, edges%%
+note: 
+- comment on the different elements in the network map, e.g., circles, edges
+- why do haplotypes exist? why do we have combinations of alleles?
+- what breaks linkage?
 
 ---
-![[20240502-IntroGenetAnal-18-5a.png]][^1]
+![[20240502-IntroGenetAnal-18-5a.png]]<%? footnotes %>
+
 [^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-5(a)
 
-%%Most men have a rare Y chromosome haplotype (why?)%%
+note: Most men have a rare Y chromosome haplotype (why?)
 
 ---
+
 ### Distribution of the star-cluster haplotype
-![[20240502-IntroGenetAnal-18-5b.png]][^1]
+![[20240502-IntroGenetAnal-18-5b.png|800]]<%? footnotes %>
+
 
 [^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-5(b)
 
 ---
-## How do you quantify the level of genetic variation?
+## Where do we come from?
+![[20250510-IntroGenetAna-4a.png|800]]
+<%? footnotes %>
+
+
+[^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-6
+
+
+---
+<!-- .slide: data-auto-animate -->
+## Gene pool
+- We have been evaluating genetic variations from the individual's  perspective ("horizontally" as a haplotype)
++ We can also look from a site / locus / gene perspective ("vertically").
++ Introduce the ==gene pool== concept
+
+---
+<!-- .slide: data-auto-animate -->
+## Gene pool
+
+> [!Gene pool]
+> Sum total of all alleles in the breeding members of a population at a given time.
+
+---
+
+<!-- .slide: data-auto-animate -->
+### Gene pool and allele frequencies
 ![[20240502-IntroGenetAnal-18-4.png|800]]
 
 <grid drag="85 45" drop="bottom" bg="forestgreen">
 
-- count the number of variable sites
-+ account for the length of the region (sequence)
-+ account for the number of sequences (sample size)
-+ Average # of differences between two sequences
++ ==**Locus**==: "region of interest", may be an entire gene, or a single nucleotide
++ ==**Allele**==: different "versions" of the sequence existing in a population
++ How many alleles are there if we take the entire haplotype region as a locus? what's the frequency of allele E (II-b)?
++ How about just looking at site 9? What's the frequency of G?
 </grid>
 
 ---
 <!-- .slide: data-auto-animate -->
 ## Gene pool and genotype frequencies
-<split left="2" right="1">
-![[20240504-IntroGenetAnal-18-7.png|600]]
+- In diploid organisms, **genotype** denotes the total allele combinations at a locus (AA, Aa, aa).
++ How do genotype frequencies depend on allele frequencies ($p_A$ and $p_a$)?
++ Why do we care?
+	+ Genetic evolution = change in allele frequencies.
+	+ Natural selection acts on fitness \<- phenotype \<- genotype
 
-- what is a gene pool?
+---
+
+<!-- .slide: data-auto-animate -->
+## Gene pool and genotype frequencies
+<split left="2" right="1">
+![[20240504-IntroGenetAnal-18-7.png|500]]
+
 + ==**Locus**==: "region of interest", may be an entire gene, or a single nucleotide
 + ==**Allele**==: different "versions" of the sequence existing in a population
 + ==**Genotype**==: denotes the total allele combinations at a locus, e.g., two alleles for diploids. <br><br>
@@ -102,10 +145,13 @@ Biological evolution is the change over time in the **genetic composition of a p
 + Now reflect on your intuitive guess, what assumptions need to be made for it to work?
 </split>
 
+
 ---
+
 <!-- .slide: data-auto-animate -->
-## Hardy-Weinberg Equilibrium
-    Suppose allele frequency of A = p, and frequency of a = q
+## Hardy-Weinberg Law
+
+Suppose allele frequency of $A = p$, and frequency of $a = q$
 
 | $f_{A/A}$ | $f_{A/a}$ | $f_{a/a}$ |
 | --------- | --------- | --------- |
@@ -113,11 +159,11 @@ Biological evolution is the change over time in the **genetic composition of a p
 + Assume the allele frequency of A is the same in females and males.
 + The probability of a baby frog to have A/A genotype is $p^2$
 + What other assumptions are needed?
-+ ==Will any evolutionary force, such as migration and natural selection, affect the Hardy-Weinberg Equilibrium?==
++ ==Will any evolutionary force, such as migration and natural selection, affect the above expectation?==
 
 ---
 <!-- .slide: data-auto-animate -->
-## Hardy-Weinberg Equilibrium
+## Hardy-Weinberg Law
 
 <split left="1" right="2">
 ```mermaid
@@ -131,45 +177,39 @@ graph TD
 ```
 
 
-+ HWE only refers to the step of forming new zygotes.
-+ Only assumptions needed are 
++ The prediction of genotype frequency from the allele frequency only relies on the step of forming new zygotes.
++ For the prediction to hold, we just need: 
 	+ random mating **with respect to the locus of interest**
 	+ same allele frequencies in both sexes
-+ Under these assumptions, HWE is restored _instantaneously_ upon mating
-+ Often hear about "no selection, no migration" only needed for HWE frequencies to represent a **long term equilibrium**.
++ Under these assumptions, the expected genotypic frequency distribution is achieved _instantaneously_ upon mating
++ Often hear about "no selection, no migration" only needed for HW frequencies to represent a **long term equilibrium**, known as Hardy Weinberg Equilibrium
 </split>
 
 ---
-### HWE exercise
-<split left="3" right="1">
-> [!question]Question
-> On the coastal islands of British Columbia there is a subspecies of black bear (*Ursus americanus kermodei*, Kermode’s bear). Many members of this black bear subspecies are white; they’re sometimes called spirit bears. These bears aren’t hybrids with polar bears, nor are they albinos. They are homozygotes for a recessive change at the MC1R gene. Individuals who are GG at this SNP are white, while AA and AG individuals are black. 
-> The genotype counts for the MC1R polymorphism in a sample of bears from British Columbia’s island populations from Ritland et al. (2001) are: $AA=42, AG=24, GG=21$
-> What are the expected frequencies of the three genotypes under HWE?
-
-![[20240506-Coop-fig2.5.png|100x]]
-
-</split>
+### Consequences of Hardy Weinberg Law
+1) Genotype frequencies can be estimated easily from allele frequencies.
+2) Genetic variation can be maintained in a population.
+3) There will be NO EVOLUTION when all of the following conditions are met
+	+ Infinite population size (no drift); no mutation; no selection; no migration; random mating; equal allele frequencies in males and females
+	+ when all of the above are true, ==allele frequencies do not change from generation to generation==
 
 ---
-<!-- .slide: data-auto-animate -->
-## Hardy-Weinberg Equilibrium
+## History of Hardy-Weinberg Law
++ Maybe the original Weinberg paper?
++ ![[20250510-Masel-2012-Fig1.png|800]]
+<%? footnotes %>
 
-<split left="2" right="1">
+[^1]: Masel, Joanna. 2012. “Rethinking Hardy–Weinberg and Genetic Drift in Undergraduate Biology.” _BioEssays_ 34 (8): 701–10. [https://doi.org/10.1002/bies.201100178](https://doi.org/10.1002/bies.201100178).
 
-- Challenge: how does HWE apply to X-linked loci?
-- 
-+ Male-baldness is an X-linked trait.
-+ Androgen Receptor (AR) is an X-linked gene involved in male development.
-+ an AR haplotype called _Eur-H1_ is **strongly associated with pattern baldness**.
-+ _Eur-H1_ occurs at a frequency of 0.71 in Europe. What percentage of European men are expected to have this allele?
-+ European women?
+---
+### Using HW law to estimate heterozygote frequency
+Example: cystic fibrosis, an autosomal recessive disease, has an incidence of 1 in 2500 in northern Europeans.  Estimate the frequency of carriers.
 
-- ![[20240508-IntroGenetAnal-18-9.png|100x]]
-</split>
+$q^2=1/2500$,
 
+So, $q=1/50=0.02, p=1-q=0.98$
 
-[^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-9
+$2pq=2 \times 0.98 \times 0.02=0.0392$, or 1 in 25 people.
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -188,8 +228,56 @@ graph TD
 
 ---
 <!-- .slide: data-auto-animate -->
+### HWE exercise
+In a human population, the genotype frequencies at one locus are 0.5 AA, 0.4 Aa, and 0.1 aa. The frequency of the A allele is:
+
+ A) 0.20.
+
+ B) 0.32.
+
+ C) 0.50.
+
+ D) 0.70.
+
+ E) 0.90.
+
+---
+<!-- .slide: data-auto-animate -->
+### HWE exercise
+<split left="3" right="1">
+> [!question]Question
+> On the coastal islands of British Columbia there is a subspecies of black bear (*Ursus americanus kermodei*, Kermode’s bear). Many members of this black bear subspecies are white; they’re sometimes called spirit bears. These bears aren’t hybrids with polar bears, nor are they albinos. They are homozygotes for a recessive change at the MC1R gene. Individuals who are GG at this SNP are white, while AA and AG individuals are black. 
+> The genotype counts for the MC1R polymorphism in a sample of bears from British Columbia’s island populations from Ritland et al. (2001) are: $AA=42, AG=24, GG=21$
+> What are the expected frequencies of the three genotypes under HWE?
+
+![[20240506-Coop-fig2.5.png|100x]]
+
+</split>
+
+---
+<!-- .slide: data-auto-animate -->
+## Hardy-Weinberg Law for X-linked loci
+
+<split left="2" right="1">
+
+- How does HW Law apply to X-linked loci?
+ 
++ Male-baldness is an X-linked trait.
++ Androgen Receptor (AR) is an X-linked gene involved in male development.
++ an AR haplotype called _Eur-H1_ is **strongly associated with pattern baldness**.
++ _Eur-H1_ occurs at a frequency of 0.71 in Europe. What percentage of European men are expected to have this allele?
++ European women?
+
+- ![[20240508-IntroGenetAnal-18-9.png|100x]]
+</split>
+
+
+[^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-9
+
+---
+<!-- .slide: data-auto-animate -->
 ## Major violations to HWE
-### **Assortative mating**
+### Assortative mating
 + Non-random mating **_with respect to_** the genotype at a locus
 + Ex: negative or disassortative mating
 	+ Major histocompatibility complex (MHC) locus, involved in immune response to pathogens, higher heterzygosity = more diversity ≈ higher fitness.
@@ -281,6 +369,18 @@ note: $\pi = \sum_{i=1}^{n}(1-\sum_{j=1}^{m}(p_{ij}^2))$
 
 
 ---
+## How do you quantify the level of genetic variation?
+![[20240502-IntroGenetAnal-18-4.png|800]]
+
+<grid drag="85 45" drop="bottom" bg="forestgreen">
+
+- count the number of variable sites
++ account for the length of the region (sequence)
++ account for the number of sequences (sample size)
++ Average # of differences between two sequences
+</grid>
+
+---
 ## Level of genetic variation vary across species
 ![[20240505-Lefler-2012-fig1.png]][^1]
 [^1]: Leffler et al. 2012. “Revisiting an Old Riddle: What Determines Genetic Diversity Levels within Species?” _PLoS Biology_ 10 (9): e1001388. [https://doi.org/10.1371/journal.pbio.1001388](https://doi.org/10.1371/journal.pbio.1001388).
@@ -360,7 +460,8 @@ note: $\pi = \sum_{i=1}^{n}(1-\sum_{j=1}^{m}(p_{ij}^2))$
 
 [^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-17
 
-note: - An allele in the G6PD gene called $A^-$ leads to strongly reduced enzyme activity, and individuals who carry this allele develop hemolytic anemia. However, this allele also confers a 50 percent reduction in the risk of severe malaria in carriers.
+note: 
+- An allele in the G6PD gene called $A^-$ leads to strongly reduced enzyme activity, and individuals who carry this allele develop hemolytic anemia. However, this allele also confers a 50 percent reduction in the risk of severe malaria in carriers.
 
 ---
 <!-- .slide: data-auto-animate -->
