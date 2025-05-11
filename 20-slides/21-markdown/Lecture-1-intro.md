@@ -1,4 +1,20 @@
 
+---
+# About me
+- 上海交大附中（99-02)
+- 北京大学生命科学专业（02-06, 本科毕设：微流系统应用于细菌耐药性）
+- 美国芝加哥大学演化与生态系（06-12, PhD thesis: evolution of gene regulatory networks and fly model of human disease）
+- 美国哈佛大学系统生物学中心（12-17, Postdoc: evolution of stress response regulation in diverse yeasts）
+- 美国爱荷华大学生物系（18-now, independent lab: evolution of stress response and adhesin gene families in fungal pathogens）
+
+---
+![[20250512-Lecture-1-intro-1.png]]
+
+---
+
+![[20250512-Lecture-1-intro-2.png]]
+
+---
 # Introduction
 ## What is population genetics? what does it study?
 
