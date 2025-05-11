@@ -7,7 +7,9 @@
 <!-- .slide: data-auto-animate -->
 ## Population genetics
 - A ==population== is a group of individuals from the same species that lives in the same geographic area and that actually or potentially interbreeds.
-- Population genetics studies the genetic variation in populations and how it changes over time
++ A ==gene pool== consists of all gametes made by all the breeding members of a population in a single generation.
++ Allele frequency: frequency of an allele in a population.
++ Population genetics studies the genetic variation in populations and how it changes over time
 
 ---
 
@@ -28,10 +30,11 @@ Biological evolution is the change over time in the **genetic composition of a p
 
 <!-- .slide: data-auto-animate -->
 ## What are the forces driving biological evolution?
-- genetic drift
+- mutation
+- recombination
 - natural selection
 - migration
-- ...
+- (random/samplping) genetic drift
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -190,7 +193,7 @@ graph TD
 1) Genotype frequencies can be estimated easily from allele frequencies.
 2) Genetic variation can be maintained in a population.
 3) There will be NO EVOLUTION when all of the following conditions are met
-	+ Infinite population size (no drift); no mutation; no selection; no migration; random mating; equal allele frequencies in males and females
+	+ ==Infinite population size (no drift); no mutation; no selection; no migration; random mating; equal allele frequencies in males and females==
 	+ when all of the above are true, ==allele frequencies do not change from generation to generation==
 
 ---
