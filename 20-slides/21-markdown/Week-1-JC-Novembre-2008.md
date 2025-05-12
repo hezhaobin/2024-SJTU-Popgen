@@ -5,7 +5,32 @@
 [^1]: Novembre, John, Toby Johnson, Katarzyna Bryc, Zoltán Kutalik, Adam R. Boyko, Adam Auton, Amit Indap, et al. 2008. “Genes Mirror Geography within Europe.” _Nature_ 456 (7218): 98–101. [https://doi.org/10.1038/nature07331](https://doi.org/10.1038/nature07331).
 
 ---
-> [!question] How are the geographical location of individuals determined?
+
+> [!question] Guiding Questions 1
+> "A geographical map of Europe arises naturally as an efficient ==two-dimensional summary of genetic variation in Europeans=="
+> Explain the highlighted term -- starting from what is the raw data to how the two-dimensional summary is produced. Discuss the method details and limitations (Patterson et al 2006 and Novembre & Stephens 2008 provide useful explanations, although don't get bogged down at the mathematical details).
+> 
+
+---
+
+> [!question] Guiding Questions 2
+> "an individual’s DNA can be used to infer their geographic origin with surprising accuracyoften to within a few hundred kilometres."
+> How are the geographical location of individuals determined?
+> Does the conclusion above mean that there has been little human migration going on in Europe?
+
+---
+> [!question] Guiding Questions 3
+> "Population structure poses a well-recognized challenge for disease association studies"
+> Explain how the usefulness of genetic variation for determining ancestry in terms of geopraphical location becomes a limitation in genome wide association studies, and discuss ways to account for it using the techniques and insight developed in this study.
+
+---
+> [!question] Guiding Questions 4: Conundrums
+> - The authors first said "Despite low average levels of genetic differentiation among Europeans", and then stated that "Within some countries individuals are strongly differentiated along the principal component (PC) axes". Do these contradict each other? (hint: check the second to last paragraph in the main text)
+> - 
+
+---
+> [!question] Open questions:
+> Has this (PCA) approach been applied to other contemporary human populations, e.g., Asia, or ancient homonoids? What are their findings? Are they consistent with this study?
 
 ---
 > [!quote] After removing SNPs with low-quality scores, we applied various stringency criteria to avoid sampling individuals from outside of Europe, to create more even sample sizes across Europe, to exclude individuals with grandparental ancestry from more than one location, and to avoid potential complications of SNPs in high linkage disequilibrium (see Methods and Supplementary Table 3).
