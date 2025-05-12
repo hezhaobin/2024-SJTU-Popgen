@@ -214,8 +214,28 @@ graph TD
 	+ when all of the above are true, ==allele frequencies do not change from generation to generation==
 
 ---
+<!-- .slide: data-auto-animate -->
 ## History of Hardy-Weinberg Law
-+ Maybe the original Weinberg paper?
+
+<split left="3" right="5" gap="1">
+![[20250512-Hardy-1908-Science 1.png|100x500]]
+
+<p style="font-size:18px">
+To The Editor of Science: ==I am reluctant to intrude in a discussion concerning matters of which I have no expert knowledge, and I should have expected the very simple point which I wish to make to have been familiar to biologists...==
+<br><br>
+... Suppose that Aa is a pair of Mendelian characters, A being dominant, and that in any given generation the numbers of pure dominants (AA), heterozygotes (Aa), and pure recessives (aa) are as $p:2q:r$. Finally, suppose that **the numbers are fairly large, so that the mating may be regarded as random, that the sexes are evenly distributed among the three varieties, and that all are equally fertile.** A little mathematics of the multiplication-table type is enough to show that in the next generation the numbers will be as
+<br><br>
+$(p + q)^2 : 2(p + q)(q + r) : (q + r)^2$ , or as $p_1:2q_1:r_1$, say.
+<br><br>
+whatever the values of $p, q$, and $r$ may be, the distribution will in any case continue unchanged after the second generation.
+<br><br>
+<i>Hardy, G. H. 2003. “Mendelian Proportions in a Mixed Population. 1908.” The Yale Journal of Biology and Medicine 76 (2): 79–80.</i>
+</p>
+</split>
+
+---
+<!-- .slide: data-auto-animate -->
+## History of Hardy-Weinberg Law
 + ![[20250510-Masel-2012-Fig1.png|800]]
 <%? footnotes %>
 
