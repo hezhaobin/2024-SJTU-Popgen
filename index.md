@@ -1,1 +1,1 @@
-# 2024 SJTU Popgen lectures
+# 2024-26 SJTU Popgen lectures

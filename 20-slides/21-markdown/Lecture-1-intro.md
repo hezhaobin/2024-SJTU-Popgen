@@ -1,3 +1,6 @@
+---
+css: style.css
+---
 
 # About me
 - 上海交大附中（99-02)
@@ -399,13 +402,55 @@ graph TD
 [^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-13
 
 ---
-## Review of Mon lecture
-> [!Question]
-> 1. Describe Hardy-Weinberg Equilibrium according to your understanding. What does it concern and what are its key assumptions?
-> 2. Describe two ways for measuring the level of genetic variation.
-> 3. Draw a cartoon haplotype network to describe the two hypotheses in the journal club paper (<span style="color:yellowgreen">*to what extent populations within continental regions exist as discrete genetic clusters versus as a genetic continuum*</span>)
+## Review of Monday lecture
+> [!summary]
+> 1. Incorporate the inbreeding coefficient in the calculation of expected genotypic frequency.
+> 2. HWP applied to forensics
+
 
 note: $\pi = \sum_{i=1}^{n}(1-\sum_{j=1}^{m}(p_{ij}^2))$ 
+
+---
+
+<style>
+	.spacious{
+		font-size: 110%;
+	}
+</style>
+
+> [!quote] Microsatellites are regions of the genome where individuals vary for the number of copies of some short DNA repeat that they carry. These regions are often highly variable across individuals, making them a suitable way to identify individuals from a DNA sample. This so-called DNA fingerprinting has a range of applications from establishing paternity and identifying human remains to matching individuals to DNA samples from a crime scene. The FBI make use of the CODIS[^1] database. The CODIS database contains the genotypes of over 13 million people, most of whom have been convicted of a crime. Most of the profiles record genotypes at 13 microsatellite loci that are tetranucleotide repeats (since 2017, 20 sites have been genotyped).<!-- element class="spacious" -->
+
+[^1]: CODIS: Combined DNA Index System 
+
+---
+<style>
+	.question{
+		font-size: 90%;
+		color: rgb(250,200,0);
+	}
+</style>
+
+<grid drag="45 40" drop="1 10" align="top">
+The allele counts for two loci (D16S539 and TH01) are shown in the two tables below for a sample of 155 people of European ancestry. You can assume these two loci are on different chromosomes.
+
+![[20250513-Coop-DNA-fingerprint-allele-freq-table.png]]
+
+You extract a DNA sample from a crime scene. The genotype is 100/80 at the D16S539 locus and 70/93 at TH01.
+</grid>
+
+<grid drag="50 100" drop="-1 10" align="top">
+A) You have a suspect in custody. Assuming this suspect is innocent and of European ancestry, what is the probability that their genotype would match this profile by chance (a false- match probability)?<!-- element class="question" -->
+
+B) The FBI uses ≥ 13 markers. Why is this higher number necessary to make the match statement convincing evidence in court?<!-- element class="question" -->
+
+C) An early case that triggered debate among forensic geneticists was a crime among the Abenaki, a Native American community in Vermont (see Lewontin, 1994, for discussion). There was a DNA sample from the crime scene, and the perpetrator was thought likely to be a member of the Abenaki community. Given that allele frequencies vary among populations, why would people be concerned about using data from a non-Abenaki population to compute a false match probability?<!-- element class="question" -->
+</split>
+
+note:
+- $p(100) = 0.042, p(80) = 0.01$
+- $p(70) = 0.14, p(93) = 0.25$
+- A: $P = p(100)*p(80)*p(70)*p(93) = 1.37\times 10^{-5}$
+- B: the above is not strong enough evidence. courts typically require a random match probability lower than one billionth to one trillionth to convict. this is because in some large metropolitan area, there may be hundreds to thousands of people with the same two marker allele combination.
 
 
 ---
@@ -414,7 +459,7 @@ note: $\pi = \sum_{i=1}^{n}(1-\sum_{j=1}^{m}(p_{ij}^2))$
 
 <grid drag="85 45" drop="bottom" bg="forestgreen">
 
-- count the number of variable sites
+- count the number of variable sites, or $k$
 + account for the length of the region (sequence)
 + account for the number of sequences (sample size)
 + Average # of differences between two sequences
@@ -422,43 +467,52 @@ note: $\pi = \sum_{i=1}^{n}(1-\sum_{j=1}^{m}(p_{ij}^2))$
 
 ---
 ## Level of genetic variation vary across species
-![[20240505-Lefler-2012-fig1.png]][^1]
-[^1]: Leffler et al. 2012. “Revisiting an Old Riddle: What Determines Genetic Diversity Levels within Species?” _PLoS Biology_ 10 (9): e1001388. [https://doi.org/10.1371/journal.pbio.1001388](https://doi.org/10.1371/journal.pbio.1001388).
+![[20240505-Lefler-2012-fig1.png]]
+
+Leffler et al. 2012. “Revisiting an Old Riddle: What Determines Genetic Diversity Levels within Species?” _PLoS Biology_ 10 (9): e1001388. [https://doi.org/10.1371/journal.pbio.1001388](https://doi.org/10.1371/journal.pbio.1001388).
 <grid drag="50 80" drop="bottomright" bg="white"><!-- element class="fragment" -->
 ![[20240204-Intro to Genetic Analysis 11th ed-fig-18-15.png]]
 <p style="color:black">M. Lynch and J. S. Conery, Science 2003</p>
 </grid>
 
+note:
+- neutral theory predicts the level of genetic diversity scales with the effective population size $\theta=4N_e \mu$
+- the range of genetic diversity in a sample of 167 species is 0.01%-8%
+- this is likely several orders of magnitude smaller than the range of effective population size among species (think some vertebrate species with < 100 breeding individuals vs plants or bacteria with a very large census population size)
+- diversity levels in the gibbon _Hoolock leuconedys_ are 0.21% for a current census population size estimate of 10,000–50,000 individuals (http://www.iucnredlist.org), whereas in _Drosophila buzzatii_, a species distributed worldwide, they are only ,10 times higher (1.94%) when population size estimates are on the same order per hectare [62]
+
 ---
-## What forces shape the level and pattern of genetic variation?
+## What forces drive biological evolution?
++ Recall that HW Law predicts **No Evolution** when several conditions are met. They are also the forces driving biological evolution.
 + How do new alleles enter the gene pool?
++ How do existing variation give rise to new combinations?
 + What forces drive changes in the frequency of alleles?
-+ How can existing genetic variation recombine to create novel combinations of alleles?
-+ Forces examined next
++ We will examine the following five forces in detail
 	1) mutation
 	2) migration
-	3) drift
+	3) random genetic drift
 	4) recombination
 	5) selection
 
 ---
-### Mutation
+## Mutation
 <split even>
 ![[20240509-IntroGenetAnal-table-18-5.png|300x500]]
 
-- **Mutation rate** ($\mu$): probability that a copy of an allele changes to some other allelic form _in one generation_
-+ doesn't just apply to a single nucleotide position - for any locus
-+ in a single generation is important - other forces can change allele forms, but they act after the formation of zygote stage
+- Generates new alleles, hence the **ultimate source of genetic **variation**.
++ Mutations are **random** with respect to fitness.
++ Mutation rate ($\mu$) is usually low, $10^{-8}$ per nucleotide per generation in mammalian nuclear genomes. For a gene that is 1,000 bp long, it takes ~70,000 generations for 50% of the original allele to be mutated.
 + data in human (circa 2009) gave an estimate of $\sim 3.0 \times 10^{-8}$ mutations/nucleotide/generation for a part of the Y-chromosome. if we extrapolate this to the entire human genome, we get an estimate of about 100 new mutations one would inherit from each of our parents _on average_.
 </split>
 
 ---
-### Migration
+## Migration
 - In addition to mutation, migration is the other way by which new variation can be introduced into a population (not counting **new combinations**, see recombination)
 - when there is isolation by distance, migration (or gene flow) is a homogenizing force, preventing allele frequencies from diverging too far
 ---
-### Recombination
-- Alleles are not gained or lost, but new combinations (haplotypes) are created by "mixing" existing ones.
+## Recombination
+- A critical force sculpting the pattern of genetic variation in populations.
++ Alleles are not gained or lost, but new combinations (haplotypes) are created by "shuffling" existing ones. For example, suppose at $t_0$, the population consists of two genotypes, "AB" and "ab". After some time and if recombination occurs between the two loci, we start to get two NEW genotypes, i.e., "Ab" and "aB"
 + Let's consider the observed and expected frequencies of the four possible haplotypes for two loci, each with two alleles (A and B, with alleles A/a and B/b)
 	+ the four possible haplotypes are?
 	+ if the frequencies of the alleles are $p_A$ and $p_B$, what are the expected frequencies for the four haplotypes naively?
@@ -510,28 +564,43 @@ note:
 + Real populations have finite population sizes. Sampling can lead to fluctuations in the allele frequency from generation to generation
 	+ let's consider an extreme case: a population consisting of a single heterozygous (A/a) individual (N=1) at generation $t_0$. What's the allele frequency at $t_0$?
 	+ suppose this species can self-fertilize, and that the population size remains at one in the next generation ($t_1$). what's the probability that the allele frequency will change (=="drift"==) to something other than its original value?
-	+ what happens when we increase N to 2?
+	+ how about at generation $t_2$?
+	+ what happens when we increase the population size (N) to 2?
 
-note: when N=1, there is a 50% chance that one of the two alleles will be fixed in the next generation. when N=2, the chance is 12.5%
+note: 
+- at $t_2$, H = 1/4. In general, heterozygosity decays 
+- when N=1, there is a 50% chance that one of the two alleles will be fixed in the next generation. when N=2, the chance is 12.5%
 
 ---
 <!-- .slide: data-auto-animate -->
 ## Genetic drift and population size
+- Genetic drift reduces neutral genetic diversity by causing, as alleles slowly drift to high or low frequencies and get either fixed or lost.
++ Genetic drift operates in both small and large populations, but its effect is more obvious in small populations (think of it as a force that scales with 1/2N)
++ Define $H$, or heterozygosity, as the probability that two randomly sampled alleles at generation t ($H_t$) are non-identical. Without mutation, $H$ decays with time at a "speed" that is inversely proportional to $N$.
++ $H_t = (1-\frac{1}{2N})^{t} H_0$
++ 1/2N << 1, $H_t = H_0 e^{-t/2N}$
+---
+<!-- .slide: data-auto-animate -->
+<grid drag="100 10" drop="1 1">
+## Genetic drift and population size
+</grid>
+
+<grid drag="45 80" drop="1 10" align="top">
+![[20250513-Jianzhi-lecture-genetic-drift-pic.png|500]]
+</grid>
+
+<grid drag="50 40" drop="-1 10" align="top">
 <dl>
 	<dt>Drift</dt>
 	<dd>any change in allele frequencies due to sampling error, not just loss or fixation of an allele</dd>
 </dl>
+</grid>
 
-> [!question]
-> In a population with 500 individuals (N=500) and two alleles at a frequency of $p=q=0.5$, if the next generation has 501 copies of A and 499 copies of a, **has there been genetic drift**?
-
----
-<!-- .slide: data-auto-animate -->
-## Genetic drift and population size
-- Drift is caused by sampling variation In a **finite population**.
+<grid drag="50 40" drop="-1 35" align="top">
++ Drift is caused by sampling variation In a **finite population**.
 + When drift is operating, one can **calculate the probabilities of different outcomes**, but one **cannot accurately predict the outcome that will occur**
-+ At a locus, drift continues to affect the allele frequency from generation to generation, until one allele is eventually fixed (and all others are lost), hence no more variation at that locus.
 + Drift **doesn't proceed in a specific direction**.
+</grid>
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -549,13 +618,14 @@ note:
 ---
 <!-- .slide: data-auto-animate -->
 ## Genetic drift and population size
-- Prob(an allele goes to fixation) ~ frequency in the present generation
+
+![[20240509-IntroGenetAnal-18-19a.png|800]][^1]
++ Prob(an allele goes to fixation) ~ frequency in the present generation
 + The initial frequency of a new allele in a diploid population of size N is $\frac{1}{2N}$
-+ If N is even modestly large, e.g., $10^4$, the probability of its fixation is $5\times10^{-5}$, while the probability of it eventually being lost is close to 1.0!
++ If N is even modestly large, e.g., $10^4$, the probability of its fixation is $5\times10^{-5}$, while the probability of it eventually being lost is close to 1.0 (diagram is misleading)!
++ When a new mutation is lucky enough to get fixed, it takes on average 4N generations.
 
-![[20240509-IntroGenetAnal-18-19a.png]]<!-- element class="fragment" -->
-
-[^1]:  Introduction to Genetic Analysis, ed 11, Fig. 18-19a
+[^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-19a
 
 note: most new mutations are lost; average time to fixation | fixed is 4N
 
