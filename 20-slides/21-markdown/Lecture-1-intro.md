@@ -735,7 +735,7 @@ graph TD
   |-|-|-|-|
   | Average number of offspring (W) | 10 | 10 | 5 |
   | Relative fitness (w) | 1.0 | 1.0 | 0.5 |
-  | Genotype frequency |  |  |  |
+  | Genotype frequency | 0.01 | 0.18 | 0.81 |
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -781,6 +781,10 @@ then, $p'=\frac{p^2w_{A/A}+\frac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\frac{pw_{A/A}
 
 <p class="fragment"> $\Delta p=p'-p=p\frac{w_A}{\bar{w}}-p=\frac{p(w_A-\bar{w})}{\bar{w}}$ </p>
 
+<p class="fragment">
+==Q: the speed of allele frequency change depends on ___?==
+</p>
+
 ---
 <!-- .slide: data-auto-animate -->
 ## Forms of selection
@@ -794,9 +798,9 @@ then, $p'=\frac{p^2w_{A/A}+\frac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\frac{pw_{A/A}
 
 ---
 ## Signatures of positive selection
-![[20240509-IntroGenetAnal-18-22.png]]
+![[20240509-IntroGenetAnal-18-22.png|800]]
 
-<grid class="fragment fade-out" drag="45 62" drop="50 30" bg="white">
+<grid class="fragment fade-out" drag="40 60" drop="50 22" bg="white">
 </grid>
 
 [^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-22

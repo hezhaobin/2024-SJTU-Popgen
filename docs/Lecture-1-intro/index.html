@@ -14,6 +14,7 @@
 
 	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
 
+    <link rel="stylesheet" href="style.css" />
 
     <script defer src="dist/fontawesome/all.min.js"></script>
 
@@ -624,34 +625,105 @@ Introduction to Genetic Analysis, ed 11, Fig. 18-13
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-## Review of Mon lecture
-<div class="callout callout-color4">
+## Review of Monday lecture
+<div class="callout callout-color1">
 <div class="callout-title">
 <div class="callout-icon">
 
-<i class="fas fa-question-circle" ></i>
+<i class="fas fa-clipboard-list" ></i>
 
 
 </div>
 <div class="callout-title-inner">
 
-Question
+Summary
 
 </div>
 </div>
 <div class="callout-content">
 
-1. Describe Hardy-Weinberg Equilibrium according to your understanding. What does it concern and what are its key assumptions?
+1. Incorporate the inbreeding coefficient in the calculation of expected genotypic frequency.
 
-2. Describe two ways for measuring the level of genetic variation.
-
-3. Draw a cartoon haplotype network to describe the two hypotheses in the journal club paper (<span style="color:yellowgreen">*to what extent populations within continental regions exist as discrete genetic clusters versus as a genetic continuum*</span>)
+2. HWP applied to forensics
 
 </div>
 </div>
 </div>
 
 <aside class="notes"><p><code>$\pi = \sum_{i=1}^{n}(1-\sum_{j=1}^{m}(p_{ij}^2))$</code></p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+	.spacious{
+		font-size: 110%;
+	}
+</style>
+
+<div class="callout callout-color9">
+<div class="callout-title">
+<div class="callout-icon">
+
+<i class="fas fa-quote-left" ></i>
+
+
+</div>
+<div class="callout-title-inner">
+
+Microsatellites are regions of the genome where individuals vary for the number of copies of some short DNA repeat that they carry. These regions are often highly variable across individuals, making them a suitable way to identify individuals from a DNA sample. This so-called DNA fingerprinting has a range of applications from establishing paternity and identifying human remains to matching individuals to DNA samples from a crime scene. The FBI make use of the CODIS<sup id="fnref:1" role="doc-noteref">1</sup>database. The CODIS database contains the genotypes of over 13 million people, most of whom have been convicted of a crime. Most of the profiles record genotypes at 13 microsatellite loci that are tetranucleotide repeats (since 2017, 20 sites have been genotyped).<!-- .element: class="spacious" -->
+
+</div>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+
+
+
+<div class="footnotes" role="doc-endnotes">
+<ol>
+<li id="fn:1" role="doc-endnote" class="footnote"><p>
+
+CODIS: Combined DNA Index System 
+
+</p></li></ol>
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<grid absolute="true" drag="100 100" drop="0 0">
+<style>
+	.question{
+		font-size: 90%;
+		color: rgb(250,200,0);
+	}
+</style>
+
+<div class="" style="position: absolute; left: 1%; top: 10%; height: 40%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+The allele counts for two loci (D16S539 and TH01) are shown in the two tables below for a sample of 155 people of European ancestry. You can assume these two loci are on different chromosomes.
+
+<img src="10-asset/11-attachment/20250513-Coop-DNA-fingerprint-allele-freq-table.png" alt="" style="object-fit: scale-down">
+
+
+You extract a DNA sample from a crime scene. The genotype is 100/80 at the D16S539 locus and 70/93 at TH01.
+</div>
+
+<div class="" style="position: absolute; left: 49%; top: 10%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+A) You have a suspect in custody. Assuming this suspect is innocent and of European ancestry, what is the probability that their genotype would match this profile by chance (a false- match probability)?<!-- .element: class="question" -->
+
+B) The FBI uses ≥ 13 markers. Why is this higher number necessary to make the match statement convincing evidence in court?<!-- .element: class="question" -->
+
+C) An early case that triggered debate among forensic geneticists was a crime among the Abenaki, a Native American community in Vermont (see Lewontin, 1994, for discussion). There was a DNA sample from the crime scene, and the perpetrator was thought likely to be a member of the Abenaki community. Given that allele frequencies vary among populations, why would people be concerned about using data from a non-Abenaki population to compute a false match probability?<!-- .element: class="question" -->
+</split>
+</div>
+
+<aside class="notes"><ul>
+<li><code>$p(100) = 0.042, p(80) = 0.01$</code></li>
+<li><code>$p(70) = 0.14, p(93) = 0.25$</code></li>
+<li>A: <code>$P = p(100)*p(80)*p(70)*p(93) = 1.37\times 10^{-5}$</code></li>
+<li>B: the above is not strong enough evidence. courts typically require a random match probability lower than one billionth to one trillionth to convict. this is because in some large metropolitan area, there may be hundreds to thousands of people with the same two marker allele combination.</li>
+</ul>
 </aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -662,7 +734,7 @@ Question
 <div class="has-dark-background" style="background-color: forestgreen; position: absolute; left: 7.5%; top: 55%; height: 45%; width: 85%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
 
 
-- count the number of variable sites
+- count the number of variable sites, or `$k$`
 - &shy;<!-- .element: class="fragment" data-fragment-index="1" -->account for the length of the region (sequence)
 - &shy;<!-- .element: class="fragment" data-fragment-index="2" -->account for the number of sequences (sample size)
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Average # of differences between two sequences
@@ -674,64 +746,66 @@ Question
 <img src="10-asset/11-attachment/20240505-Lefler-2012-fig1.png" alt="" style="object-fit: scale-down">
 
 
+Leffler et al. 2012. “Revisiting an Old Riddle: What Determines Genetic Diversity Levels within Species?” _PLoS Biology_ 10 (9): e1001388. [https://doi.org/10.1371/journal.pbio.1001388](https://doi.org/10.1371/journal.pbio.1001388).
 <div class="has-light-background" style="background-color: white; position: absolute; left: 50%; top: 20%; height: 80%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
 <!-- .element: class="fragment" -->
 <img src="10-asset/11-attachment/20240204-Intro to Genetic Analysis 11th ed-fig-18-15.png" alt="" style="object-fit: scale-down">
 
 <p style="color:black">M. Lynch and J. S. Conery, Science 2003</p>
 </div>
-
-<div class="footnotes" role="doc-endnotes">
-<ol>
-<li id="fn:1" role="doc-endnote" class="footnote"><p>
-
-Leffler et al. 2012. “Revisiting an Old Riddle: What Determines Genetic Diversity Levels within Species?” _PLoS Biology_ 10 (9): e1001388. [https://doi.org/10.1371/journal.pbio.1001388](https://doi.org/10.1371/journal.pbio.1001388).
-
-</p></li></ol>
 </div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+
+<aside class="notes"><ul>
+<li>neutral theory predicts the level of genetic diversity scales with the effective population size <code>$\theta=4N_e \mu$</code></li>
+<li>the range of genetic diversity in a sample of 167 species is 0.01%-8%</li>
+<li>this is likely several orders of magnitude smaller than the range of effective population size among species (think some vertebrate species with &lt; 100 breeding individuals vs plants or bacteria with a very large census population size)</li>
+<li>diversity levels in the gibbon <em>Hoolock leuconedys</em> are 0.21% for a current census population size estimate of 10,000–50,000 individuals (<a href="http://www.iucnredlist.org">http://www.iucnredlist.org</a>), whereas in <em>Drosophila buzzatii</em>, a species distributed worldwide, they are only ,10 times higher (1.94%) when population size estimates are on the same order per hectare [62]</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-## What forces shape the level and pattern of genetic variation?
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->How do new alleles enter the gene pool?
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->What forces drive changes in the frequency of alleles?
-- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->How can existing genetic variation recombine to create novel combinations of alleles?
-- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->Forces examined next
+## What forces drive biological evolution?
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Recall that HW Law predicts **No Evolution** when several conditions are met. They are also the forces driving biological evolution.
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->How do new alleles enter the gene pool?
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->How do existing variation give rise to new combinations?
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->What forces drive changes in the frequency of alleles?
+- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->We will examine the following five forces in detail
 	1) mutation
 	2) migration
-	3) drift
+	3) random genetic drift
 	4) recombination
 	5) selection
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-### Mutation
+## Mutation
 <split even>
 <img src="10-asset/11-attachment/20240509-IntroGenetAnal-table-18-5.png" alt="" style="width: 300px; height: 500px; object-fit: fill">
 
 
-- **Mutation rate** (`$\mu$`): probability that a copy of an allele changes to some other allelic form _in one generation_
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->doesn't just apply to a single nucleotide position - for any locus
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->in a single generation is important - other forces can change allele forms, but they act after the formation of zygote stage
+- Generates new alleles, hence the **ultimate source of genetic **variation**.
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Mutations are **random** with respect to fitness.
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Mutation rate (`$\mu$`) is usually low, `$10^{-8}$` per nucleotide per generation in mammalian nuclear genomes. For a gene that is 1,000 bp long, it takes ~70,000 generations for 50% of the original allele to be mutated.
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->data in human (circa 2009) gave an estimate of `$\sim 3.0 \times 10^{-8}$` mutations/nucleotide/generation for a part of the Y-chromosome. if we extrapolate this to the entire human genome, we get an estimate of about 100 new mutations one would inherit from each of our parents _on average_.
 </split>
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-### Migration
+## Migration
 - In addition to mutation, migration is the other way by which new variation can be introduced into a population (not counting **new combinations**, see recombination)
 - when there is isolation by distance, migration (or gene flow) is a homogenizing force, preventing allele frequencies from diverging too far
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-### Recombination
-- Alleles are not gained or lost, but new combinations (haplotypes) are created by "mixing" existing ones.
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Let's consider the observed and expected frequencies of the four possible haplotypes for two loci, each with two alleles (A and B, with alleles A/a and B/b)
-	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->the four possible haplotypes are?
-	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->if the frequencies of the alleles are `$p_A$` and `$p_B$`, what are the expected frequencies for the four haplotypes naively?
-	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->`$P_{AB} = p_A \times p_B$` etc.
-	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->If the observed frequencies are very close to the expected, we say that the two loci are in **linkage equilibrium**
-	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->If not, then the loci are said to be in **linkage disequilibrium (LD)**.
+## Recombination
+- A critical force sculpting the pattern of genetic variation in populations.
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Alleles are not gained or lost, but new combinations (haplotypes) are created by "shuffling" existing ones. For example, suppose at `$t_0$`, the population consists of two genotypes, "AB" and "ab". After some time and if recombination occurs between the two loci, we start to get two NEW genotypes, i.e., "Ab" and "aB"
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Let's consider the observed and expected frequencies of the four possible haplotypes for two loci, each with two alleles (A and B, with alleles A/a and B/b)
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->the four possible haplotypes are?
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->if the frequencies of the alleles are `$p_A$` and `$p_B$`, what are the expected frequencies for the four haplotypes naively?
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->`$P_{AB} = p_A \times p_B$` etc.
+	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->If the observed frequencies are very close to the expected, we say that the two loci are in **linkage equilibrium**
+	- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->If not, then the loci are said to be in **linkage disequilibrium (LD)**.
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -794,47 +868,51 @@ Introduction to Genetic Analysis, ed 11, Fig. 18-17
 - &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Real populations have finite population sizes. Sampling can lead to fluctuations in the allele frequency from generation to generation
 	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->let's consider an extreme case: a population consisting of a single heterozygous (A/a) individual (N=1) at generation `$t_0$`. What's the allele frequency at `$t_0$`?
 	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->suppose this species can self-fertilize, and that the population size remains at one in the next generation (`$t_1$`). what's the probability that the allele frequency will change (<mark>"drift"</mark>) to something other than its original value?
-	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->what happens when we increase N to 2?
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->how about at generation `$t_2$`?
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->what happens when we increase the population size (N) to 2?
 </div>
 
-<aside class="notes"><p>when N=1, there is a 50% chance that one of the two alleles will be fixed in the next generation. when N=2, the chance is 12.5%</p>
+<aside class="notes"><ul>
+<li>at <code>$t_2$</code>, H = 1/4. In general, heterozygosity decays </li>
+<li>when N=1, there is a 50% chance that one of the two alleles will be fixed in the next generation. when N=2, the chance is 12.5%</li>
+</ul>
 </aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Genetic drift and population size
+- Genetic drift reduces neutral genetic diversity by causing, as alleles slowly drift to high or low frequencies and get either fixed or lost.
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Genetic drift operates in both small and large populations, but its effect is more obvious in small populations (think of it as a force that scales with 1/2N)
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Define `$H$`, or heterozygosity, as the probability that two randomly sampled alleles at generation t (`$H_t$`) are non-identical. Without mutation, `$H$` decays with time at a "speed" that is inversely proportional to `$N$`.
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->`$H_t = (1-\frac{1}{2N})^{t} H_0$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->1/2N << 1, `$H_t = H_0 e^{-t/2N}$`
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="position: absolute; left: 1%; top: 1%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Genetic drift and population size
+</div>
+
+<div class="" style="position: absolute; left: 1%; top: 10%; height: 80%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+<img src="10-asset/11-attachment/20250513-Jianzhi-lecture-genetic-drift-pic.png" alt="" style="width: 500px; object-fit: fill">
+
+</div>
+
+<div class="" style="position: absolute; left: 49%; top: 10%; height: 40%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
 <dl>
 	<dt>Drift</dt>
 	<dd>any change in allele frequencies due to sampling error, not just loss or fixation of an allele</dd>
 </dl>
-
-<div class="callout callout-color4">
-<div class="callout-title">
-<div class="callout-icon">
-
-<i class="fas fa-question-circle" ></i>
-
-
 </div>
-<div class="callout-title-inner">
 
-Question
+<div class="" style="position: absolute; left: 49%; top: 35%; height: 40%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
 
-</div>
-</div>
-<div class="callout-content">
-
-In a population with 500 individuals (N=500) and two alleles at a frequency of `$p=q=0.5$`, if the next generation has 501 copies of A and 499 copies of a, **has there been genetic drift**?
-
-</div>
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-## Genetic drift and population size
-- Drift is caused by sampling variation In a **finite population**.
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->When drift is operating, one can **calculate the probabilities of different outcomes**, but one **cannot accurately predict the outcome that will occur**
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->At a locus, drift continues to affect the allele frequency from generation to generation, until one allele is eventually fixed (and all others are lost), hence no more variation at that locus.
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Drift is caused by sampling variation In a **finite population**.
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->When drift is operating, one can **calculate the probabilities of different outcomes**, but one **cannot accurately predict the outcome that will occur**
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Drift **doesn't proceed in a specific direction**.
+</div>
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -857,11 +935,13 @@ In a population with 500 individuals (N=500) and two alleles at a frequency of `
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Genetic drift and population size
-- Prob(an allele goes to fixation) ~ frequency in the present generation
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->The initial frequency of a new allele in a diploid population of size N is `$\frac{1}{2N}$`
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->If N is even modestly large, e.g., `$10^4$`, the probability of its fixation is `$5\times10^{-5}$`, while the probability of it eventually being lost is close to 1.0!
 
-<img src="10-asset/11-attachment/20240509-IntroGenetAnal-18-19a.png" alt="" style="object-fit: scale-down" class="fragment">
+<img src="10-asset/11-attachment/20240509-IntroGenetAnal-18-19a.png" alt="" style="width: 800px; object-fit: fill">
+
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Prob(an allele goes to fixation) ~ frequency in the present generation
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->The initial frequency of a new allele in a diploid population of size N is `$\frac{1}{2N}$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->If N is even modestly large, e.g., `$10^4$`, the probability of its fixation is `$5\times10^{-5}$`, while the probability of it eventually being lost is close to 1.0 (diagram is misleading)!
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->When a new mutation is lucky enough to get fixed, it takes on average 4N generations.
 </div>
 
 <aside class="notes"><p>most new mutations are lost; average time to fixation | fixed is 4N</p>
@@ -869,7 +949,7 @@ In a population with 500 individuals (N=500) and two alleles at a frequency of `
 <ol>
 <li id="fn:1" role="doc-endnote" class="footnote"><p>
 
-<p> Introduction to Genetic Analysis, ed 11, Fig. 18-19a</p>
+<p>Introduction to Genetic Analysis, ed 11, Fig. 18-19a</p>
 </p></li></ol>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
@@ -899,7 +979,7 @@ Slightly deleterious alleles may be driven to fixation, while beneficial mutatio
 1. &shy;<!-- .element: class="fragment" data-fragment-index="3" -->When a new beneficial mutation arise, there is an appreciable chance that it will be lost in the first few generations!
 	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->the individual carrying the new mutation may not have the opportunity to reproduce.
 	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->or it may not pass on the beneficial mutation (since by definition, a new mutation must be a single copy in a diploid individual)
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Molecular clock: implication of genetic drift
@@ -909,7 +989,7 @@ Slightly deleterious alleles may be driven to fixation, while beneficial mutatio
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->recall that the probability of fixation for a neutral mutation equals its initial frequency. for a new, neutral mutation, this is `$\frac{1}{2N}$`
 - &shy;<!-- .element: class="fragment" data-fragment-index="4" -->therefore, the number of **fixed neutral mutations** per generation, which we will call "substitution rate", or k, is `$k=2N\mu \times \frac{1}{2N}=\mu$`
 - &shy;<!-- .element: class="fragment" data-fragment-index="5" -->that is, the substitution rate for neutral mutations equal the rate at which they appear. this is only true for neutral mutations!
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Molecular clock: implication of genetic drift
@@ -931,7 +1011,7 @@ graph TD
 - &shy;<!-- .element: class="fragment" data-fragment-index="5" -->can we observe all neutral substitutions?
 - &shy;<!-- .element: class="fragment" data-fragment-index="6" -->how do we know mutation rate?
 </split>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Genetic drift and population size
@@ -1070,7 +1150,7 @@ Graham Coop, Population and Quantitative Genetics, v1.2, 2020 https://github.com
   |-|-|-|-|
   | Average number of offspring (W) | 10 | 10 | 5 |
   | Relative fitness (w) | 1.0 | 1.0 | 0.5 |
-  | Genotype frequency |  |  |  |
+  | Genotype frequency | 0.01 | 0.18 | 0.81 |
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -1117,6 +1197,10 @@ then, `$p'=\frac{p^2w_{A/A}+\frac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\frac{pw_{A/A
 <p class="fragment"> we define `$w_A=pw_{A/A}+qw_{A/a}$` as allelic fitness, or mean fitness of allele A </p>
 
 <p class="fragment"> `$\Delta p=p'-p=p\frac{w_A}{\bar{w}}-p=\frac{p(w_A-\bar{w})}{\bar{w}}$` </p>
+
+<p class="fragment">
+<mark>Q: the speed of allele frequency change depends on ___?</mark>
+</p>
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -1132,10 +1216,10 @@ then, `$p'=\frac{p^2w_{A/A}+\frac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\frac{pw_{A/A
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Signatures of positive selection
-<img src="10-asset/11-attachment/20240509-IntroGenetAnal-18-22.png" alt="" style="object-fit: scale-down">
+<img src="10-asset/11-attachment/20240509-IntroGenetAnal-18-22.png" alt="" style="width: 800px; object-fit: fill">
 
 
-<div class="fragment fade-out has-light-background" style="background-color: white; position: absolute; left: 50%; top: 30%; height: 62%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+<div class="fragment fade-out has-light-background" style="background-color: white; position: absolute; left: 50%; top: 22%; height: 60%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
 
 </div>
 
