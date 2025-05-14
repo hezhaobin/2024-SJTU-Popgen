@@ -650,7 +650,7 @@ note: most new mutations are lost; average time to fixation | fixed is 4N
 + therefore, the number of **fixed neutral mutations** per generation, which we will call "substitution rate", or k, is $k=2N\mu \times \frac{1}{2N}=\mu$
 + that is, the substitution rate for neutral mutations equal the rate at which they appear. this is only true for neutral mutations!
 
----
+--
 <!-- .slide: data-auto-animate -->
 ## Molecular clock: implication of genetic drift
 <split left="1" right="2">
