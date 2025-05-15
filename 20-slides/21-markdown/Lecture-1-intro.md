@@ -92,7 +92,7 @@ note: Most men have a rare Y chromosome haplotype (why?)
 ---
 
 ### Distribution of the star-cluster haplotype
-![[20240502-IntroGenetAnal-18-5b.png|800]]<%? footnotes %>
+![[20240502-IntroGenetAnal-18-5b.png|800]]
 
 
 [^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-5(b)
