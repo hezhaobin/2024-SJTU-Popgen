@@ -1,6 +1,6 @@
 ---
 theme: beige
-css: style.css
+css: css/custom.css
 ---
 <!-- .slide: data-auto-animate -->
 ## Inheritance of complex traits
