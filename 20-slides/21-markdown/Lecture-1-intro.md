@@ -680,6 +680,21 @@ graph TD
 > + The constant rate of substitution for neutral mutations can be used to estimate divergence time.
 
 ---
+
+### Appendix: some math behind random genetic drift
+<split left="2" right="3">
+![[20250519-Lecture-1-coalescent-tree-ubc-lecture.png]]
+
+- two alleles in a population of N diploids
++ $P_2(coalescent)=1/2N$
++ $Pr(X=k)=(1-p)^{k-1}p$
++ $E(X)=1/p=2N$
++ with n alleles, time to common ancestor:
++ $1-P_n \approx 1-\frac{{n \choose 2}}{2N}$
++ $TMCA=\sum_{i=2}^{n}\frac{2N}{{i \choose 2}}=4N\frac{n-1}{n}$
+</split>
+
+---
 <!-- .slide: data-auto-animate -->
 ## Selection
 
