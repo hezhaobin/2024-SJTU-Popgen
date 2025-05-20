@@ -4,13 +4,16 @@ This repository stores the markdown formatted slides, notes, scripts for teachin
 _Folder structure_
 
 - `10-asset/11-attachment/`: stores images and other assets to be included in the slides
-- `10-asset/12-supplementary/`: supplementary materials not directly used in the slides
+- `10-asset/12-supp-notes/`: supplementary materials not directly used in the slides
+- `10-asset/13-analyses/`: scripts used to make plots and calculate quantities
 - `20-slides/21-markdown/`: main slide source files, written with the help of the [Advanced Slides](https://mszturc.github.io/obsidian-advanced-slides/) plugin in Obsidien
 - `20-slides/22-pdf/`: exported slides in PDF
-- `20-slides/23-notes/`: additional notes while preparing the lectures
-- `20-slides/24-analysis/`: scripts used to make plots and calculate quantities
 
 _Notes_
+
+**2025-05-20**
+
+Reorganize folder structures.
 
 **2025-05-19**
 
