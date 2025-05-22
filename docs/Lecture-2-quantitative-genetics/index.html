@@ -206,7 +206,7 @@ In the early 1900s, William Bateson and George Yule suggested that continuous tr
 <ol>
 <li id="fn:1" role="doc-endnote" class="footnote"><p>
 
-code [here]()
+code [here](https://github.com/hezhaobin/2024-SJTU-Popgen/blob/8b701ac1748e5c3a64b9622adb3a891106683881/10-asset/13-analyses/20250515-simulate-multifactorial-hypothesis.R)
 
 </p></li></ol>
 </div>
@@ -282,7 +282,7 @@ code [here]()
 <aside class="notes"><ul>
 <li>panel a: an example using height data for 660 women from the United States collected by the Centers for Disease Control and Prevention</li>
 </ul>
-</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### A simple genetic model for quantitative traits
@@ -297,6 +297,179 @@ code [here]()
 	- &shy;<!-- .element: class="fragment" data-fragment-index="8" -->`$X=\bar{X}+g+e$`
 	- &shy;<!-- .element: class="fragment" data-fragment-index="9" -->`$x=g+e=59 cm$`
 	- &shy;<!-- .element: class="fragment" data-fragment-index="10" -->how to estimate `$g$` and `$e$`?
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### A simple genetic model for quantitative traits
+<img src="10-asset/11-attachment/20250520-IntroGenetAnal-table-19-2-raw.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### A simple genetic model for quantitative traits
+<img src="10-asset/11-attachment/20250520-IntroGenetAnal-table-19-2-annotated.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="10-asset/11-attachment/20250520-IntroGenetAnal-table-19-2-annotated.png" alt="" style="object-fit: scale-down">
+
+
+- `$X=\bar{X}+g+e$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->`$62=70-6-2$`
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Genetic and Environment Variances
+- `$Var(X+Y) = Var(X)+Var(Y)$`, when is this true?
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->`$Var(X)=Var(\bar{X}+g+e)=0+V_g+V_e$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->What if genetic and environmental factors are not independent?
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Introduct **Covariance**
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Covariance
+<split left="1" right="2">
+<img src="10-asset/11-attachment/20250520-Lecture-2-quant-genet-covariance.png" alt="" style="width: px; height: 400px; object-fit: fill">
+
+
+- `$cov(X,Y)=E[(X-E[X])(Y-E[Y])]$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->`$cov(X,Y)=E[XY]-E[X]E[Y]$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --> To estimate from the data
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->`$cov(X,Y)=\frac{1}{n}\sum\limits_{i}(X_i-\bar{X})(Y_i-\bar{Y})$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->`$cov(X,Y)=\frac{1}{n}\sum\limits_{i}(x_i y_i)$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->Now, back to `$Var(X)$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->`$Var(X)=Var(g+e)=E[(g+e)^2]$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->`$Var(X)=E[g^2]+E[e^2]+2E[ge]$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="8" -->`$Var(X)=V_g+V_e+COV_{g,e}$`
+</split>
+
+
+
+<div class="footnotes" role="doc-endnotes">
+<ol>
+<li id="fn:1" role="doc-endnote" class="footnote"><p>
+
+By Cmglee - Own work, CC BY-SA 4.0, [link](https://commons.wikimedia.org/w/index.php?curid=90452334)
+
+</p></li></ol>
+</div>
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Correlation between traits
+- Statistically, **correlation**, or **dependence**, is any statistical non-independent relationship between two random variables.
+	- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->although "correlation" may indicate any type of relationship, a _linear relationship_ is often implied.
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->There are many ways to measure the strength of correlation. The most common one is the **Pearson's correlation coefficient**, often written as `$\rho$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->`$\rho_{X,Y}=\frac{cov(X,Y)}{\sigma_X \sigma_Y}=\frac{cov(X,Y)}{\sqrt{V_X V_Y}}=\frac{E[X-\mu_X]E[Y-\mu_Y]}{\sqrt{V_X V_Y}}$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->"normalized covariance", independent of the variance scales
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->if `$g$` and `$e$` are correlated, we cannot use `$V_X=V_g+V_e$`
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### What can and can't Pearson's correlation coefficient tell you?
+
+<img src="10-asset/11-attachment/20250520-Lecture-2-quant-genet-correlation.png" alt="" style="object-fit: scale-down">
+
+
+
+
+<div class="footnotes" role="doc-endnotes">
+<ol>
+<li id="fn:1" role="doc-endnote" class="footnote"><p>
+
+By DenisBoigelot, original uploader was Imagecreator - Own work, original uploader was Imagecreator, CC0, [link](https://commons.wikimedia.org/w/index.php?curid=15165296)
+
+</p></li></ol>
+</div>
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Broad-sense Heritability
+- How much of the variation in a population is due to genetic factors and how much to environmental factors?
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Define **broad-sense heritability (`$H^2$`)**: 
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->`$H^2=\frac{V_g}{V_X}$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->"broad sense" because it encompasses several ways by which genes contribute to variation, including **additive** and **epistatic** effects.
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->How to estimate broad-sense heritability?
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Broad-sense Heritability
+- In experimental model organisms, one can estimate `$H^2$` using **inbred lines**. By rearing many genetically identical individuals from each inbred line in randomly assigned environments, one can tease apart the genetic vs environmental variance.
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->In humans, one can use **twin studies** to estimate broad sense heritability.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Measuring heritability in humans using twin studies
+- In twin studies, one uses sets of identical twins who were separated shortly after birth and reared apart by unrelated adoptive parents.
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->We have many (n) sets of twins: 
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->`$(X_1'\, X_1''), (X_2'\, X_2'')...(X_n'\, X_n'')$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->We can express the phenotypic deviations for one set of twins as
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->`$x'=g+e'$` and `$x''=g+e''$`
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Measuring heritability in humans using twin studies
+- `$cov(x', x'')=E[x'x'']=E[(g+e')(g+e'')]$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->`$cov(x', x'')=E[g^2]+E[ge']+E[ge'']+E[e'e'']$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->`$E[g^2]=V_g$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->`$E[ge']=E[ge'']=0$`, (no correlation between genotype and environment)
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->`$E[e'e'']=0$` as the twins are randomly assigned to families;
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->Hence, `$cov(x', x'')=V_g$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->`$H^2=\frac{V_g}{V_X}=\frac{cov(x',x'')}{V_X}=\frac{cov(x',x'')}{\sqrt{V_{X'}V_{X''}}}=r_{X',X''}$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->`$H^2$`<mark>is equivalent to the correlation between (monozygotic) twins</mark>.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="position: absolute; left: 1%; top: 1%; height: 80%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+<table>
+    <tr>
+        <td></td>
+        <td>Twin</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>X&#39;</td>
+        <td>X&#39;&#39;</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>100</td>
+        <td>110</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>125</td>
+        <td>118</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>97</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>92</td>
+        <td>104</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>86</td>
+        <td>89</td>
+    </tr>
+</table>
+</div>
+
+<div class="" style="position: absolute; left: 1%; top: 75%; height: 10%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
+
+`$H^2=\frac{119.2}{154.3}=0.77$`
+</div>
+
+<div class="" style="position: absolute; left: 49%; top: 1%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="10-asset/11-attachment/20250521-IntroGenetAnal-table-19-4.png" alt="" style="width: 350px; object-fit: fill">
+
+</div>
 </div></script></section></div>
     </div>
 

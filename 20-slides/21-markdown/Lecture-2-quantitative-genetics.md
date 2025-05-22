@@ -54,7 +54,7 @@ css: css/custom.css
 --
 ### Multifactorial Hypothesis: ten loci, additive
 ![[20250515-Lecture-2-Mendelian-ten-loci.png]]
-[^1]: code [here]()
+[^1]: code [here](https://github.com/hezhaobin/2024-SJTU-Popgen/blob/8b701ac1748e5c3a64b9622adb3a891106683881/10-asset/13-analyses/20250515-simulate-multifactorial-hypothesis.R)
 
 --
 
@@ -127,7 +127,7 @@ note:
 - panel a: an example using height data for 660 women from the United States collected by the Centers for Disease Control and Prevention
 
 ---
-
+<!-- .slide: data-auto-animate -->
 ### A simple genetic model for quantitative traits
 - What is a (mathematical) model?
 	+ simplified representation of a complex phenomenon.
@@ -140,3 +140,139 @@ note:
 	+ $X=\bar{X}+g+e$
 	+ $x=g+e=59 cm$
 	+ how to estimate $g$ and $e$?
+
+---
+<!-- .slide: data-auto-animate -->
+### A simple genetic model for quantitative traits
+![[20250520-IntroGenetAnal-table-19-2-raw.png]]
+
+---
+### A simple genetic model for quantitative traits
+![[20250520-IntroGenetAnal-table-19-2-annotated.png]]
+---
+![[20250520-IntroGenetAnal-table-19-2-annotated.png]]
+
+- $X=\bar{X}+g+e$
++ $62=70-6-2$
+
+---
+### Genetic and Environment Variances
+- $Var(X+Y) = Var(X)+Var(Y)$, when is this true?
++ $Var(X)=Var(\bar{X}+g+e)=0+V_g+V_e$
++ What if genetic and environmental factors are not independent?
++ Introduct **Covariance**
+
+---
+## Covariance
+<split left="1" right="2">
+![[20250520-Lecture-2-quant-genet-covariance.png|x400]][^1]
+
+- $cov(X,Y)=E[(X-E[X])(Y-E[Y])]$
++ $cov(X,Y)=E[XY]-E[X]E[Y]$
++  To estimate from the data
+	+ $cov(X,Y)=\frac{1}{n}\sum\limits_{i}(X_i-\bar{X})(Y_i-\bar{Y})$
+	+ $cov(X,Y)=\frac{1}{n}\sum\limits_{i}(x_i y_i)$
++ Now, back to $Var(X)$
+	+ $Var(X)=Var(g+e)=E[(g+e)^2]$
+	+ $Var(X)=E[g^2]+E[e^2]+2E[ge]$
+	+ $Var(X)=V_g+V_e+COV_{g,e}$
+</split>
+
+[^1]: By Cmglee - Own work, CC BY-SA 4.0, [link](https://commons.wikimedia.org/w/index.php?curid=90452334)
+
+---
+<!-- .slide: data-auto-animate -->
+### Correlation between traits
+- Statistically, **correlation**, or **dependence**, is any statistical non-independent relationship between two random variables.
+	+ although "correlation" may indicate any type of relationship, a _linear relationship_ is often implied.
++ There are many ways to measure the strength of correlation. The most common one is the **Pearson's correlation coefficient**, often written as $\rho$
+	+ $\rho_{X,Y}=\frac{cov(X,Y)}{\sigma_X \sigma_Y}=\frac{cov(X,Y)}{\sqrt{V_X V_Y}}=\frac{E[X-\mu_X]E[Y-\mu_Y]}{\sqrt{V_X V_Y}}$
+	+ "normalized covariance", independent of the variance scales
+	+ if $g$ and $e$ are correlated, we cannot use $V_X=V_g+V_e$
+--
+### What can and can't Pearson's correlation coefficient tell you?
+
+![[20250520-Lecture-2-quant-genet-correlation.png]]
+
+[^1]: By DenisBoigelot, original uploader was Imagecreator - Own work, original uploader was Imagecreator, CC0, [link](https://commons.wikimedia.org/w/index.php?curid=15165296)
+
+---
+<!-- .slide: data-auto-animate -->
+### Broad-sense Heritability
+- How much of the variation in a population is due to genetic factors and how much to environmental factors?
++ Define **broad-sense heritability ($H^2$)**: 
+	+ $H^2=\frac{V_g}{V_X}$
+	+ "broad sense" because it encompasses several ways by which genes contribute to variation, including **additive** and **epistatic** effects.
++ How to estimate broad-sense heritability?
+---
+<!-- .slide: data-auto-animate -->
+### Broad-sense Heritability
+- In experimental model organisms, one can estimate $H^2$ using **inbred lines**. By rearing many genetically identical individuals from each inbred line in randomly assigned environments, one can tease apart the genetic vs environmental variance.
++ In humans, one can use **twin studies** to estimate broad sense heritability.
+---
+<!-- .slide: data-auto-animate -->
+### Measuring heritability in humans using twin studies
+- In twin studies, one uses sets of identical twins who were separated shortly after birth and reared apart by unrelated adoptive parents.
++ We have many (n) sets of twins: 
+	+ $(X_1'\, X_1''), (X_2'\, X_2'')...(X_n'\, X_n'')$
++ We can express the phenotypic deviations for one set of twins as
+	+ $x'=g+e'$ and $x''=g+e''$
+---
+<!-- .slide: data-auto-animate -->
+### Measuring heritability in humans using twin studies
+- $cov(x', x'')=E[x'x'']=E[(g+e')(g+e'')]$
++ $cov(x', x'')=E[g^2]+E[ge']+E[ge'']+E[e'e'']$
+	+ $E[g^2]=V_g$
+	+ $E[ge']=E[ge'']=0$, (no correlation between genotype and environment)
+	+ $E[e'e'']=0$ as the twins are randomly assigned to families;
+	+ Hence, $cov(x', x'')=V_g$
++ $H^2=\frac{V_g}{V_X}=\frac{cov(x',x'')}{V_X}=\frac{cov(x',x'')}{\sqrt{V_{X'}V_{X''}}}=r_{X',X''}$
+	+ $H^2$==is equivalent to the correlation between (monozygotic) twins==.
+---
+<grid drag="50 80" drop="1 1" align="top">
+<table>
+    <tr>
+        <td></td>
+        <td>Twin</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>X&#39;</td>
+        <td>X&#39;&#39;</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>100</td>
+        <td>110</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>125</td>
+        <td>118</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>97</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>92</td>
+        <td>104</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>86</td>
+        <td>89</td>
+    </tr>
+</table>
+</grid>
+
+<grid drag="50 10" drop="1 75" align="top">
+$H^2=\frac{119.2}{154.3}=0.77$
+</grid>
+
+<grid drag="50 100" drop="-1 1">
+![[20250521-IntroGenetAnal-table-19-4.png|350]]
+</grid>
