@@ -118,7 +118,7 @@ $s_X^2=\frac{1}{n-1}\sum{(X_i-\bar{X})^2}$
 ![[20250519-IntroGenetAnal-19-2 1.png|100]]
 
 - $X \sim N(\mu, \sigma^2)$
-+ $f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{\frac{(x-\mu)^2}{2\sigma^2}}$
++ $f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
 + Can mean and variance vary independently?
 	+ is that generally true of all distributions?
 </split>
