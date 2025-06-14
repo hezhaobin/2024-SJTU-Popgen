@@ -175,7 +175,7 @@ note:
 + Now, back to $Var(X)$
 	+ $Var(X)=Var(g+e)=E[(g+e)^2]$
 	+ $Var(X)=E[g^2]+E[e^2]+2E[ge]$
-	+ $Var(X)=V_g+V_e+COV_{g,e}$
+	+ $Var(X)=V_g+V_e+2COV_{g,e}$
 </split>
 
 [^1]: By Cmglee - Own work, CC BY-SA 4.0, [link](https://commons.wikimedia.org/w/index.php?curid=90452334)
