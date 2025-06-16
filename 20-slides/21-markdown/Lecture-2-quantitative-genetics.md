@@ -186,7 +186,7 @@ note:
 - Statistically, **correlation**, or **dependence**, is any statistical non-independent relationship between two random variables.
 	+ although "correlation" may indicate any type of relationship, a _linear relationship_ is often implied.
 + There are many ways to measure the strength of correlation. The most common one is the **Pearson's correlation coefficient**, often written as $\rho$
-	+ $\rho_{X,Y}=\frac{cov(X,Y)}{\sigma_X \sigma_Y}=\frac{cov(X,Y)}{\sqrt{V_X V_Y}}=\frac{E[X-\mu_X]E[Y-\mu_Y]}{\sqrt{V_X V_Y}}$
+	+ $\rho_{X,Y}=\frac{cov(X,Y)}{\sigma_X \sigma_Y}=\frac{cov(X,Y)}{\sqrt{V_X V_Y}}=\frac{E[(X-E[X])(Y-E[Y])]}{\sqrt{V_X V_Y}}$
 	+ "normalized covariance", independent of the variance scales
 	+ if $g$ and $e$ are correlated, we cannot use $V_X=V_g+V_e$
 --
