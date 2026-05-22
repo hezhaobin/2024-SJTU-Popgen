@@ -11,12 +11,13 @@ css: style.css
 - https://binhe.org
 - https://binhe-lab.org
 - bin-he@uiowa.edu
+
 ---
 ![[20250512-Lecture-1-intro-1.png]]
 
 ---
 
-![[20250512-Lecture-1-intro-2.png]]
+![[20260517-Lecture-1-Intro-2.png]]
 
 ---
 # Introduction
@@ -78,6 +79,7 @@ Biological evolution is the change over time in the **genetic composition of a p
 
 
 note: 
+- this is the Y-chromosome
 - comment on the different elements in the network map, e.g., circles, edges
 - why do haplotypes exist? why do we have combinations of alleles?
 - what breaks linkage?
@@ -228,7 +230,7 @@ To The Editor of Science: ==I am reluctant to intrude in a discussion concerning
 <br><br>
 ... Suppose that Aa is a pair of Mendelian characters, A being dominant, and that in any given generation the numbers of pure dominants (AA), heterozygotes (Aa), and pure recessives (aa) are as $p:2q:r$. Finally, suppose that **the numbers are fairly large, so that the mating may be regarded as random, that the sexes are evenly distributed among the three varieties, and that all are equally fertile.** A little mathematics of the multiplication-table type is enough to show that in the next generation the numbers will be as
 <br><br>
-$(p + q)^2 : 2(p + q)(q + r) : (q + r)^2$ , or as $p_1:2q_1:r_1$, say.
+$(p + q)^2:2(p + q)(q + r):(q + r)^2$ , or as $p_1:2q_1:r_1$, say.
 <br><br>
 whatever the values of $p, q$, and $r$ may be, the distribution will in any case continue unchanged after the second generation.
 <br><br>
@@ -245,14 +247,17 @@ whatever the values of $p, q$, and $r$ may be, the distribution will in any case
 [^1]: Masel, Joanna. 2012. “Rethinking Hardy–Weinberg and Genetic Drift in Undergraduate Biology.” _BioEssays_ 34 (8): 701–10. [https://doi.org/10.1002/bies.201100178](https://doi.org/10.1002/bies.201100178).
 
 ---
+<!-- .slide: data-auto-animate -->
 ### Using HW law to estimate heterozygote frequency
 Example: cystic fibrosis, an autosomal recessive disease, has an incidence of 1 in 2500 in northern Europeans.  Estimate the frequency of carriers.
 
-$q^2=1/2500$,
+$q^2=1/2500$  <!-- element class="fragment" -->
 
-So, $q=1/50=0.02, p=1-q=0.98$
+$q=1/50=0.02, p=1-q=0.98$  <!-- element class="fragment" -->
 
-$2pq=2 \times 0.98 \times 0.02=0.0392$, or 1 in 25 people.
+$2pq=2 \times 0.98 \times 0.02=0.0392$  <!-- element class="fragment" -->
+
+or 1 in 25 people.  <!-- element class="fragment" -->
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -296,6 +301,18 @@ In a human population, the genotype frequencies at one locus are 0.5 AA, 0.4 Aa,
 ![[20240506-Coop-fig2.5.png|100x]]
 
 </split>
+
+note:
+- total = 42+24+21 = 87
+- freq of A = (42+12)/87 = 54/87 ≈ 0.62
+- expected frequency
+	- AA: 87 \* 0.62^2 = 33
+	- AG: 87 \* 2 \* 0.62 \* 0.38 = 41
+	- GG: 87 \* 0.38^2 = 13
+- heterozygotes less common than expected, why?
+	- assortive mating
+	- migration of black morphs depressing number of hets
+	- selection against hets
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -383,10 +400,18 @@ graph TD
 
 ---
 <!-- .slide: data-auto-animate -->
+
+![[20260519-IntroGenetAnal-box-18-2.png]]
+note:
+- full-sib would be 1/2
+
+---
+<!-- .slide: data-auto-animate -->
 ### Consequences of inbreeding
 ==Examples of inbreeding effect on frequency of homozygous recessives==
 ![[20240509-IntroGenetAnal-table-18-3.png]][^1]
 [^1]: Introduction to Genetic Analysis, ed 11, Table 18-3
+
 
 ---
 ### Consequence of inbreeding
@@ -454,6 +479,7 @@ note:
 
 
 ---
+<!-- .slide: data-auto-animate -->
 ## How do you quantify the level of genetic variation?
 ![[20240502-IntroGenetAnal-18-4.png|800]]
 
@@ -466,19 +492,41 @@ note:
 </grid>
 
 ---
+<!-- .slide: data-auto-animate -->
+## How do you quantify the level of genetic variation?
++ **Gene Diversity**
+	+ $G_D=1-\sum{p_i^2}=1-(p_1^2+p_2^2+p_3^2+...+p_n^2)$
+	+ =**Heterozygosity** (why? only applies to diploids)
++ **Nucleotide Diversity**
+	+ probability that any nucleotide position is different between two randomly selected allele from a population.
+	+ like gene diversity, but calculated per nucleotide position and averaged
+	+ independent of length and more easily compared across species
+
+---
+<!-- .slide: data-auto-animate -->
 ## Level of genetic variation vary across species
 ![[20240505-Lefler-2012-fig1.png]]
 
 Leffler et al. 2012. “Revisiting an Old Riddle: What Determines Genetic Diversity Levels within Species?” _PLoS Biology_ 10 (9): e1001388. [https://doi.org/10.1371/journal.pbio.1001388](https://doi.org/10.1371/journal.pbio.1001388).
-<grid drag="50 80" drop="bottomright" bg="white"><!-- element class="fragment" -->
+
+---
+<!-- .slide: data-auto-animate -->
+## Level of genetic variation vary across species
+<split even>
+<div>
 ![[20240204-Intro to Genetic Analysis 11th ed-fig-18-15.png]]
-<p style="color:black">M. Lynch and J. S. Conery, Science 2003</p>
-</grid>
+M. Lynch and J. S. Conery, Science 2003
+</div>
+
+- neutral theory predicts the level of genetic diversity scales with the effective population size 
+  
+  $\theta=4N_e \mu$
++ the range of genetic diversity in a sample of 167 species is 0.01%-8%
++ this is likely several orders of magnitude smaller than the range of effective population size among species (think some vertebrate species with fewer than 100 breeding individuals vs plants or bacteria with a very large census population size)
+
+</split>
 
 note:
-- neutral theory predicts the level of genetic diversity scales with the effective population size $\theta=4N_e \mu$
-- the range of genetic diversity in a sample of 167 species is 0.01%-8%
-- this is likely several orders of magnitude smaller than the range of effective population size among species (think some vertebrate species with < 100 breeding individuals vs plants or bacteria with a very large census population size)
 - diversity levels in the gibbon _Hoolock leuconedys_ are 0.21% for a current census population size estimate of 10,000–50,000 individuals (http://www.iucnredlist.org), whereas in _Drosophila buzzatii_, a species distributed worldwide, they are only ,10 times higher (1.94%) when population size estimates are on the same order per hectare [62]
 
 ---
@@ -499,7 +547,7 @@ note:
 <split even>
 ![[20240509-IntroGenetAnal-table-18-5.png|300x500]]
 
-- Generates new alleles, hence the **ultimate source of genetic **variation**.
+- Generates new alleles, hence the **ultimate source of genetic variation**.
 + Mutations are **random** with respect to fitness.
 + Mutation rate ($\mu$) is usually low, $10^{-8}$ per nucleotide per generation in mammalian nuclear genomes. For a gene that is 1,000 bp long, it takes ~70,000 generations for 50% of the original allele to be mutated.
 + data in human (circa 2009) gave an estimate of $\sim 3.0 \times 10^{-8}$ mutations/nucleotide/generation for a part of the Y-chromosome. if we extrapolate this to the entire human genome, we get an estimate of about 100 new mutations one would inherit from each of our parents _on average_.
@@ -512,6 +560,7 @@ note:
 ---
 ## Recombination
 - A critical force sculpting the pattern of genetic variation in populations.
+  
 + Alleles are not gained or lost, but new combinations (haplotypes) are created by "shuffling" existing ones. For example, suppose at $t_0$, the population consists of two genotypes, "AB" and "ab". After some time and if recombination occurs between the two loci, we start to get two NEW genotypes, i.e., "Ab" and "aB"
 + Let's consider the observed and expected frequencies of the four possible haplotypes for two loci, each with two alleles (A and B, with alleles A/a and B/b)
 	+ the four possible haplotypes are?
@@ -535,6 +584,11 @@ note:
 
 
 [^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-17
+
+note:
+1. left: $D=0.25-0.5\times 0.5=0$
+2. right: $D=0.5-0.5\times 0.5=0.25$
+3. LD on the right
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -561,6 +615,7 @@ note:
 <!-- .slide: data-auto-animate -->
 ## Genetic drift and population size
 - When calculating the expected genotype frequency from allele frequencies under Hardy-Weinberg Equilibrium, we made a sneaky assumption - the population size is assumed to be so large that we can "sample with replacement".
+  
 + Real populations have finite population sizes. Sampling can lead to fluctuations in the allele frequency from generation to generation
 	+ let's consider an extreme case: a population consisting of a single heterozygous (A/a) individual (N=1) at generation $t_0$. What's the allele frequency at $t_0$?
 	+ suppose this species can self-fertilize, and that the population size remains at one in the next generation ($t_1$). what's the probability that the allele frequency will change (=="drift"==) to something other than its original value?
@@ -574,11 +629,13 @@ note:
 ---
 <!-- .slide: data-auto-animate -->
 ## Genetic drift and population size
-- Genetic drift reduces neutral genetic diversity by causing, as alleles slowly drift to high or low frequencies and get either fixed or lost.
-+ Genetic drift operates in both small and large populations, but its effect is more obvious in small populations (think of it as a force that scales with 1/2N)
+- Genetic drift reduces neutral genetic diversity as alleles slowly drift to high or low frequencies and get either fixed or lost.
+  
++ Genetic drift operates in both small and large populations, but its effect is more obvious in small populations (**why?** think of it as a force that scales with 1/2N)
 + Define $H$, or heterozygosity, as the probability that two randomly sampled alleles at generation t ($H_t$) are non-identical. Without mutation, $H$ decays with time at a "speed" that is inversely proportional to $N$.
 + $H_t = (1-\frac{1}{2N})^{t} H_0$
-+ 1/2N << 1, $H_t = H_0 e^{-t/2N}$
++ 1/2N << 1, $H_t = H_0 e^{-t/2N}$ (can you prove this?)
+
 ---
 <!-- .slide: data-auto-animate -->
 <grid drag="100 10" drop="1 1">
@@ -620,7 +677,7 @@ note:
 ## Genetic drift and population size
 
 ![[20240509-IntroGenetAnal-18-19a.png|800]][^1]
-+ Prob(an allele goes to fixation) ~ frequency in the present generation
++ Prob(an allele goes to fixation) ~ frequency in the present generation (why?)
 + The initial frequency of a new allele in a diploid population of size N is $\frac{1}{2N}$
 + If N is even modestly large, e.g., $10^4$, the probability of its fixation is $5\times10^{-5}$, while the probability of it eventually being lost is close to 1.0 (diagram is misleading)!
 + When a new mutation is lucky enough to get fixed, it takes on average 4N generations.
@@ -639,6 +696,9 @@ note: most new mutations are lost; average time to fixation | fixed is 4N
 2) When a new beneficial mutation arise, there is an appreciable chance that it will be lost in the first few generations!
 	+ the individual carrying the new mutation may not have the opportunity to reproduce.
 	+ or it may not pass on the beneficial mutation (since by definition, a new mutation must be a single copy in a diploid individual)
+
+note:
+
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -790,11 +850,11 @@ More generally
 
 define $\bar{w}=p^2w_{A/A}+2pqw_{A/a}+q^2w_{a/a}$ is the mean relative fitness of the population
 
-then, $p'=\frac{p^2w_{A/A}+\frac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\frac{pw_{A/A}+qw_{A/a}}{\bar{w}}$
+then, $p'=\dfrac{p^2w_{A/A}+\tfrac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\dfrac{pw_{A/A}+qw_{A/a}}{\bar{w}}$
 
 <p class="fragment"> we define $w_A=pw_{A/A}+qw_{A/a}$ as allelic fitness, or mean fitness of allele A </p>
 
-<p class="fragment"> $\Delta p=p'-p=p\frac{w_A}{\bar{w}}-p=\frac{p(w_A-\bar{w})}{\bar{w}}$ </p>
+<p class="fragment"> $\Delta p=p'-p=p\dfrac{w_A}{\bar{w}}-p=\dfrac{p(w_A-\bar{w})}{\bar{w}}$ </p>
 
 <p class="fragment">
 ==Q: the speed of allele frequency change depends on ___?==

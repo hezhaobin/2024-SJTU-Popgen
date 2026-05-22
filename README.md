@@ -1,6 +1,10 @@
 # 2024-26 SJTU Popgen lectures
 This repository stores the markdown formatted slides, notes, scripts for teaching population genetics and quantatitive genetics at Zhiyuan College, Shanghai Jiao Tong University, from 2024-2026 (ongoing).
 
+_Website_
+
+https://teachpopgen.binhe.org
+
 _Folder structure_
 
 - `10-asset/11-attachment/`: stores images and other assets to be included in the slides
