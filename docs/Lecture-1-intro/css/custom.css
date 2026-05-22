@@ -1,7 +1,6 @@
 /* Footnote style for all slides */
-.footnotes {
+.reveal .footnotes {
   font-size: 0.9em;
-  color: #e6e6e6;
   margin-top: 1em;
   display: block;
 }
@@ -9,15 +8,28 @@
 /* Adjust list item spacing globally */
 .reveal .slides ul li,
 .reveal .slides ol li {
-  margin-top: 10px;    /* Space above each item */
-  margin-bottom: 10px; /* Space below each item */
+  margin-top: 20px;    /* Space above each item */
+  margin-bottom: 20px; /* Space below each item */
   line-height: 1.3;    /* Adjust line height if needed */
 }
 
 /* Nested lists (optional) */
 .reveal .slides ul ul li,
 .reveal .slides ol ol li {
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+/* Not capitalized for headings */
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    text-transform: capitalize !important;
+}
+
+/* Adjust base font size for Beige theme */
+.reveal {
+    font-size: 32px; /* Default is ~36px, reduce as needed */
 }

@@ -17,7 +17,7 @@ css: style.css
 
 ---
 
-![[20260517-Lecture-1-Intro-2.png]]
+![[20260517-Lecture-1-Intro-2.svg]]
 
 ---
 # Introduction
