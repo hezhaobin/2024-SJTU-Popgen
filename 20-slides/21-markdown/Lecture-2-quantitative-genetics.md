@@ -67,12 +67,14 @@ css: css/custom.css
 + Understanding the inheritance of complex traits is one of the most important challenges facing geneticists in the twenty-first century
 + **Genetic architecture**: description of all of the genetic factors that influence a trait
 	+ ==property of a specific population, can vary among populations==
+	  
 	+ different alleles segregate in different pops, and different pops experience different environments.
 
 ---
 <!-- .slide: data-auto-animate -->
 ### Types of traits and inheritance
 - **Continuous trait** is one that can take on a potentially infinite number of states over a continuous range, e.g., human height.
+  
 	+ ==typically have complex inheritance== involving multiple genetic and environmental factors.
 + **Categorical trait** is one where individuals in a population can be sorted into discrete categories, e.g., purple vs white flower or tall vs short stems in Mendel's pea plants.
 	+ ==typically controlled by one or two genes==, hence exhibiting simple inheritance
@@ -81,7 +83,9 @@ css: css/custom.css
 <!-- .slide: data-auto-animate -->
 ### Types of traits and inheritance
 - **Threshold trait**: often used in medical genetics, where individuals are classified into "disease" and "non-disease" groups, e.g., diabetes
+  
 	+ having multiple genetic and environmental factors
+	  
 	+ individuals who have a certain number of risk factors combined exceed a threshold and develop the disease ("buffering" hypothesis)
 + **Meristic trait**, or "counting trait", can take on a number of discrete values.
  
@@ -91,7 +95,7 @@ css: css/custom.css
 
 **Mean**: the arithmetic average of a set of data
 
-$\bar{X}=\frac{\sum{X_i}}{n}$
+$\bar{X}=\dfrac{\sum{X_i}}{n}$
 
 **Variance** is a measure of the deviation from the mean
 
@@ -108,6 +112,7 @@ $s_X^2=\frac{1}{n-1}\sum{(X_i-\bar{X})^2}$
 ### More on Mean and Variance
 - population mean, sample mean, expectation of random variable
 + We have a binomially distributed random variable $X\sim B(n,p)$
+  
 	+ what is its mean, variance?
 + What's the relationship and difference between sample variance, sample standard deviation (SD) and standard error of the mean (SEM)?
 
@@ -194,7 +199,7 @@ note:
 
 ![[20250520-Lecture-2-quant-genet-correlation.png]]
 
-[^1]: By DenisBoigelot, original uploader was Imagecreator - Own work, original uploader was Imagecreator, CC0, [link](https://commons.wikimedia.org/w/index.php?curid=15165296)
+[^1]: By DenisBoigelot, original uploader was Imagecreator - Owggggn work, original uploader was Imagecreator, CC0, [link](https://commons.wikimedia.org/w/index.php?curid=15165296)
 
 ---
 <!-- .slide: data-auto-animate -->

@@ -176,6 +176,38 @@ note: Most men have a rare Y chromosome haplotype (why?)
 <!-- .slide: data-auto-animate -->
 ## Hardy-Weinberg Law
 
+--
+<!-- .slide: data-auto-animate -->
+## History of Hardy-Weinberg Law
+
+<split left="3" right="5" gap="1">
+![[20250512-Hardy-1908-Science 1.png|100x500]]
+
+<p style="font-size:18px">
+To The Editor of Science: ==I am reluctant to intrude in a discussion concerning matters of which I have no expert knowledge, and I should have expected the very simple point which I wish to make to have been familiar to biologists...==
+<br><br>
+... Suppose that Aa is a pair of Mendelian characters, A being dominant, and that in any given generation the numbers of pure dominants (AA), heterozygotes (Aa), and pure recessives (aa) are as $p:2q:r$. Finally, suppose that **the numbers are fairly large, so that the mating may be regarded as random, that the sexes are evenly distributed among the three varieties, and that all are equally fertile.** A little mathematics of the multiplication-table type is enough to show that in the next generation the numbers will be as
+<br><br>
+$(p + q)^2:2(p + q)(q + r):(q + r)^2$ , or as $p_1:2q_1:r_1$, say.
+<br><br>
+whatever the values of $p, q$, and $r$ may be, the distribution will in any case continue unchanged after the second generation.
+<br><br>
+<i>Hardy, G. H. 2003. “Mendelian Proportions in a Mixed Population. 1908.” The Yale Journal of Biology and Medicine 76 (2): 79–80.</i>
+</p>
+</split>
+--
+<!-- .slide: data-auto-animate -->
+## History of Hardy-Weinberg Law
++ ![[20250510-Masel-2012-Fig1.png|800]]
+<%? footnotes %>
+
+[^1]: Masel, Joanna. 2012. “Rethinking Hardy–Weinberg and Genetic Drift in Undergraduate Biology.” _BioEssays_ 34 (8): 701–10. [https://doi.org/10.1002/bies.201100178](https://doi.org/10.1002/bies.201100178).
+
+---
+
+<!-- .slide: data-auto-animate -->
+## Hardy-Weinberg Law
+
 Suppose allele frequency of $A = p$, and frequency of $a = q$
 
 | $f_{A/A}$ | $f_{A/a}$ | $f_{a/a}$ |
@@ -185,6 +217,7 @@ Suppose allele frequency of $A = p$, and frequency of $a = q$
 + The probability of a baby frog to have A/A genotype is $p^2$
 + What other assumptions are needed?
 + ==Will any evolutionary force, such as migration and natural selection, affect the above expectation?==
+
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -213,38 +246,13 @@ graph TD
 ---
 ### Consequences of Hardy Weinberg Law
 1) Genotype frequencies can be estimated easily from allele frequencies.
+   
 2) Genetic variation can be maintained in a population.
 3) There will be NO EVOLUTION when all of the following conditions are met
 	+ ==Infinite population size (no drift); no mutation; no selection; no migration; random mating; equal allele frequencies in males and females==
+	  
 	+ when all of the above are true, ==allele frequencies do not change from generation to generation==
-
----
-<!-- .slide: data-auto-animate -->
-## History of Hardy-Weinberg Law
-
-<split left="3" right="5" gap="1">
-![[20250512-Hardy-1908-Science 1.png|100x500]]
-
-<p style="font-size:18px">
-To The Editor of Science: ==I am reluctant to intrude in a discussion concerning matters of which I have no expert knowledge, and I should have expected the very simple point which I wish to make to have been familiar to biologists...==
-<br><br>
-... Suppose that Aa is a pair of Mendelian characters, A being dominant, and that in any given generation the numbers of pure dominants (AA), heterozygotes (Aa), and pure recessives (aa) are as $p:2q:r$. Finally, suppose that **the numbers are fairly large, so that the mating may be regarded as random, that the sexes are evenly distributed among the three varieties, and that all are equally fertile.** A little mathematics of the multiplication-table type is enough to show that in the next generation the numbers will be as
-<br><br>
-$(p + q)^2:2(p + q)(q + r):(q + r)^2$ , or as $p_1:2q_1:r_1$, say.
-<br><br>
-whatever the values of $p, q$, and $r$ may be, the distribution will in any case continue unchanged after the second generation.
-<br><br>
-<i>Hardy, G. H. 2003. “Mendelian Proportions in a Mixed Population. 1908.” The Yale Journal of Biology and Medicine 76 (2): 79–80.</i>
-</p>
-</split>
-
----
-<!-- .slide: data-auto-animate -->
-## History of Hardy-Weinberg Law
-+ ![[20250510-Masel-2012-Fig1.png|800]]
-<%? footnotes %>
-
-[^1]: Masel, Joanna. 2012. “Rethinking Hardy–Weinberg and Genetic Drift in Undergraduate Biology.” _BioEssays_ 34 (8): 701–10. [https://doi.org/10.1002/bies.201100178](https://doi.org/10.1002/bies.201100178).
+	+ This is the **==Hardy-Weinberg Equilibrium==**
 
 ---
 <!-- .slide: data-auto-animate -->
