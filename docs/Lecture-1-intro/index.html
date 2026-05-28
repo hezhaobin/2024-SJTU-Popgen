@@ -777,7 +777,7 @@ C) An early case that triggered debate among forensic geneticists was a crime am
 <div class="has-dark-background" style="background-color: forestgreen; position: absolute; left: 7.5%; top: 55%; height: 45%; width: 85%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
 
 
-- count the number of variable sites, or `$k$`
+- count the number of variable (segregating) sites, or `$K$`
 - &shy;<!-- .element: class="fragment" data-fragment-index="1" -->account for the length of the region (sequence)
 - &shy;<!-- .element: class="fragment" data-fragment-index="2" -->account for the number of sequences (sample size)
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Average # of differences between two sequences
@@ -786,25 +786,66 @@ C) An early case that triggered debate among forensic geneticists was a crime am
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## How do you quantify the level of genetic variation?
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**Gene Diversity**
-	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->`$G_D=1-\sum{p_i^2}=1-(p_1^2+p_2^2+p_3^2+...+p_n^2)$`
-	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->=**Heterozygosity** (why? only applies to diploids)
-- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->**Nucleotide Diversity**
-	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->probability that any nucleotide position is different between two randomly selected allele from a population.
-	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->like gene diversity, but calculated per nucleotide position and averaged
-	- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->independent of length and more easily compared across species
+<img src="10-asset/11-attachment/20240502-IntroGenetAnal-18-4.png" alt="" style="width: 800px; object-fit: fill">
+
+
+<div class="has-dark-background" style="background-color: forestgreen; position: absolute; left: 7.5%; top: 55%; height: 45%; width: 85%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+- **Gene Diversity** = Prob(two randomly chosen alleles are the same)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->`$G_D=1-\sum{p_i^2}=1-(p_1^2+p_2^2+p_3^2+...+p_n^2)$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->`$G_D=1-\frac{1}{7}^2\times 5-\frac{2}{7}^2= 0.816$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->=**Heterozygosity** (why? only applies to diploids)
+</div>
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-## Level of genetic variation vary across species
+## How do you quantify the level of genetic variation?
+- **Gene Diversity** 
+	- `$G_D=1-\sum{p_i^2}=1-(p_1^2+p_2^2+p_3^2+...+p_n^2)$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Doesn't tell us the number of differences
+
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->**Nucleotide Diversity** (`$\pi$`)
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->expected number of differences between two randomly chosen alleles.
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->often normalized by sequence length to produce per nucleotide levels.
+		- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->probability that any nucleotide position is different between two randomly selected allele from a population.
+	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->`$\mathbb{E}[\pi]=\theta=4N_e \mu$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->`$\hat{\theta_w}=\dfrac{K}{\alpha_n}$`, where  `$\alpha_n=\sum\limits_{i=1}^{n-1}\frac{1}{i}$`
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Puzzle about how genetic variation vary across species
+
+<mark>Or the lack thereof</mark>
+
 <img src="10-asset/11-attachment/20240505-Lefler-2012-fig1.png" alt="" style="object-fit: scale-down">
 
+
+<div class="callout callout-color5">
+<div class="callout-title">
+<div class="callout-icon">
+
+<i class="fas fa-exclamation-triangle" ></i>
+
+
+</div>
+<div class="callout-title-inner">
+
+Genetic diversity levels vary mostly within 2 orders of magnitude, but we expect a lot more differences between species. <mark>Why</mark>? 
+
+</div>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+<!-- .element: class="fragment" -->
 
 Leffler et al. 2012. “Revisiting an Old Riddle: What Determines Genetic Diversity Levels within Species?” _PLoS Biology_ 10 (9): e1001388. [https://doi.org/10.1371/journal.pbio.1001388](https://doi.org/10.1371/journal.pbio.1001388).
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-## Level of genetic variation vary across species
+## Puzzle about how genetic variation vary across species
 <split even>
 <div>
 <img src="10-asset/11-attachment/20240204-Intro to Genetic Analysis 11th ed-fig-18-15.png" alt="" style="object-fit: scale-down">
@@ -815,16 +856,53 @@ M. Lynch and J. S. Conery, Science 2003
 - neutral theory predicts the level of genetic diversity scales with the effective population size 
   
   `$\theta=4N_e \mu$`
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->the range of genetic diversity in a sample of 167 species is 0.01%-8%
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->this is likely several orders of magnitude smaller than the range of effective population size among species (think some vertebrate species with fewer than 100 breeding individuals vs plants or bacteria with a very large census population size)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->The range of genetic diversity in a sample of 167 species is 0.01%-8%
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->How much does mutation rate `$\mu$` (per nucleotide per generation) differ?
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->How much does "Effective" population size `$N_e$` differ?
+
 
 </split>
 </div>
 
 <aside class="notes"><ul>
 <li>diversity levels in the gibbon <em>Hoolock leuconedys</em> are 0.21% for a current census population size estimate of 10,000–50,000 individuals (<a href="http://www.iucnredlist.org">http://www.iucnredlist.org</a>), whereas in <em>Drosophila buzzatii</em>, a species distributed worldwide, they are only ,10 times higher (1.94%) when population size estimates are on the same order per hectare [62]</li>
+<li>&shy;<!-- .element: class="fragment" data-fragment-index="4" -->this is likely several orders of magnitude smaller than the range of effective population size among species (think some vertebrate species with fewer than 100 breeding individuals vs plants or bacteria with a very large census population size)</li>
 </ul>
-</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Puzzle about how genetic variation vary across species
+
+<img src="10-asset/11-attachment/20240509-IntroGenetAnal-table-18-5.png" alt="" style="object-fit: scale-down">
+
+<div class="callout callout-color5">
+<div class="callout-title">
+<div class="callout-icon">
+
+<i class="fas fa-exclamation-triangle" ></i>
+
+
+</div>
+<div class="callout-title-inner">
+
+Mutation rate varies within ~2 orders of magnitude.
+
+</div>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Puzzle about how genetic variation vary across species
+- How about effective population size, or, to an approximation, census population size?
+  
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Some vertebrate species have fewer than 100 breeding individuals vs plants or bacteria with a very large census population size in the `$10^{6}-10^{10}$`
+	  
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Diversity level in the gibbon _Hoolock leuconedys_ is 0.21% compared with 1.94% in _Drosophila buzzatii_, a species distributed worldwide. The former has a current census population size estimate of 10,000–50,000 individuals (http://www.iucnredlist.org), whereas the population size estimates for the latter are on the same order per hectare (10,000 m<sup>2</sup>)
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## What forces drive biological evolution?
@@ -838,20 +916,16 @@ M. Lynch and J. S. Conery, Science 2003
 	3) random genetic drift
 	4) recombination
 	5) selection
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Mutation
-<split even>
-<img src="10-asset/11-attachment/20240509-IntroGenetAnal-table-18-5.png" alt="" style="width: 300px; height: 500px; object-fit: fill">
-
-
 - Generates new alleles, hence the **ultimate source of genetic variation**.
+  
 - &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Mutations are **random** with respect to fitness.
 - &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Mutation rate (`$\mu$`) is usually low, `$10^{-8}$` per nucleotide per generation in mammalian nuclear genomes. For a gene that is 1,000 bp long, it takes ~70,000 generations for 50% of the original allele to be mutated.
-- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->data in human (circa 2009) gave an estimate of `$\sim 3.0 \times 10^{-8}$` mutations/nucleotide/generation for a part of the Y-chromosome. if we extrapolate this to the entire human genome, we get an estimate of about 100 new mutations one would inherit from each of our parents _on average_.
-</split>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Data in human (circa 2009) gave an estimate of `$\sim 3.0 \times 10^{-8}$` mutations/nucleotide/generation for a part of the Y-chromosome. if we extrapolate this to the entire human genome, we get an estimate of about 100 new mutations one would inherit from each of our parents _on average_.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Migration
@@ -925,14 +999,15 @@ M. Lynch and J. S. Conery, Science 2003
 
 <p>Introduction to Genetic Analysis, ed 11, Fig. 18-17</p>
 </p></li></ol>
-</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+</div></aside></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Genetic drift and population size
 - When calculating the expected genotype frequency from allele frequencies under Hardy-Weinberg Equilibrium, we made a sneaky assumption - the population size is assumed to be so large that we can "sample with replacement".
   
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Real populations have finite population sizes. Sampling can lead to fluctuations in the allele frequency from generation to generation
-	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->let's consider an extreme case: a population consisting of a single heterozygous (A/a) individual (N=1) at generation `$t_0$`. What's the allele frequency at `$t_0$`?
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Real populations have finite population sizes. Sampling can lead to fluctuations in the allele frequency from generation to generation, <mark>why</mark>?
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Consider an extreme case: a population consisting of a single heterozygous (A/a) individual (N=1) at generation `$t_0$`. What's the allele frequency at `$t_0$`?
+	  
 	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->suppose this species can self-fertilize, and that the population size remains at one in the next generation (`$t_1$`). what's the probability that the allele frequency will change (<mark>"drift"</mark>) to something other than its original value?
 	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->how about at generation `$t_2$`?
 	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->what happens when we increase the population size (N) to 2?
@@ -942,45 +1017,39 @@ M. Lynch and J. S. Conery, Science 2003
 <li>at <code>$t_2$</code>, H = 1/4. In general, heterozygosity decays </li>
 <li>when N=1, there is a 50% chance that one of the two alleles will be fixed in the next generation. when N=2, the chance is 12.5%</li>
 </ul>
-</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Genetic drift and population size
-- Genetic drift reduces neutral genetic diversity as alleles slowly drift to high or low frequencies and get either fixed or lost.
-  
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Genetic drift operates in both small and large populations, but its effect is more obvious in small populations (**why?** think of it as a force that scales with 1/2N)
+
+<span onclick="this.querySelector('.answer').style.display='inline'" style="cursor:pointer; border-bottom: 2px dashed gray">
+What's the consequence of genetic drift on genetic diversity? 
+<span class="answer" style="display:none; color:gold; margin-left:1em">Genetic drift reduces neutral genetic diversity as alleles slowly drift to high or low frequencies and get either fixed or lost.
+</span>
+</span>
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Genetic drift and population size
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Genetic drift operates in both small and large populations, but are its effect more or less obvious in small populations (**why?**)
 - &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Define `$H$`, or heterozygosity, as the probability that two randomly sampled alleles at generation t (`$H_t$`) are non-identical. Without mutation, `$H$` decays with time at a "speed" that is inversely proportional to `$N$`.
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->`$H_t = (1-\frac{1}{2N})^{t} H_0$`
 - &shy;<!-- .element: class="fragment" data-fragment-index="4" -->1/2N << 1, `$H_t = H_0 e^{-t/2N}$` (can you prove this?)
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+</div>
+
+<aside class="notes"></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-<div class="" style="position: absolute; left: 1%; top: 1%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
-
-## Genetic drift and population size
+<img src="10-asset/11-attachment/20250513-Jianzhi-lecture-genetic-drift-pic.png" alt="" style="object-fit: scale-down">
 </div>
 
-<div class="" style="position: absolute; left: 1%; top: 10%; height: 80%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
-
-<img src="10-asset/11-attachment/20250513-Jianzhi-lecture-genetic-drift-pic.png" alt="" style="width: 500px; object-fit: fill">
-
-</div>
-
-<div class="" style="position: absolute; left: 49%; top: 10%; height: 40%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
-
-<dl>
-	<dt>Drift</dt>
-	<dd>any change in allele frequencies due to sampling error, not just loss or fixation of an allele</dd>
-</dl>
-</div>
-
-<div class="" style="position: absolute; left: 49%; top: 35%; height: 40%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start" align="top">
-
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Drift is caused by sampling variation In a **finite population**.
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->When drift is operating, one can **calculate the probabilities of different outcomes**, but one **cannot accurately predict the outcome that will occur**
-- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Drift **doesn't proceed in a specific direction**.
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<aside class="notes"><ul>
+<li>&shy;<!-- .element: class="fragment" data-fragment-index="1" -->Drift is caused by sampling variation In a <strong>finite population</strong>.</li>
+<li>&shy;<!-- .element: class="fragment" data-fragment-index="2" -->Drift can be any change in allele frequencies due to sampling error, not just loss or fixation of an allele</li>
+<li>&shy;<!-- .element: class="fragment" data-fragment-index="3" -->When drift is operating, one can <strong>calculate the probabilities of different outcomes</strong>, but one <strong>cannot accurately predict the outcome that will occur</strong></li>
+<li>&shy;<!-- .element: class="fragment" data-fragment-index="4" -->Drift <strong>doesn&#39;t proceed in a specific direction</strong>.</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Genetic drift and population size
@@ -1005,7 +1074,7 @@ M. Lynch and J. S. Conery, Science 2003
 
 <img src="10-asset/11-attachment/20240509-IntroGenetAnal-18-19a.png" alt="" style="width: 800px; object-fit: fill">
 
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Prob(an allele goes to fixation) ~ frequency in the present generation (why?)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Prob of an allele goes to fixation ~ frequency in the present generation (<mark>why?</mark>)
 - &shy;<!-- .element: class="fragment" data-fragment-index="2" -->The initial frequency of a new allele in a diploid population of size N is `$\frac{1}{2N}$`
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->If N is even modestly large, e.g., `$10^4$`, the probability of its fixation is `$5\times10^{-5}$`, while the probability of it eventually being lost is close to 1.0 (diagram is misleading)!
 - &shy;<!-- .element: class="fragment" data-fragment-index="4" -->When a new mutation is lucky enough to get fixed, it takes on average 4N generations.
@@ -1022,11 +1091,11 @@ M. Lynch and J. S. Conery, Science 2003
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Consequence of genetic drift
-<div class="callout callout-color2">
+<div class="callout callout-color5">
 <div class="callout-title">
 <div class="callout-icon">
 
-<i class="fas fa-fire-alt" ></i>
+<i class="fas fa-exclamation-triangle" ></i>
 
 
 </div>
@@ -1052,12 +1121,14 @@ Slightly deleterious alleles may be driven to fixation, while beneficial mutatio
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Molecular clock: implication of genetic drift
-- Because of genetic drift, neutral mutations can become fixed, which we call "substitutions".
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->note the difference between "mutation" and "substitution"
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->the number of mutations that are expected to "appear" in a population in one generation is proportional to the number of copies in the gene pool, i.e., `$2N\mu$`, where `$\mu$` denotes the mutation rate per locus per generation.
-- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->recall that the probability of fixation for a neutral mutation equals its initial frequency. for a new, neutral mutation, this is `$\frac{1}{2N}$`
-- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->therefore, the number of **fixed neutral mutations** per generation, which we will call "substitution rate", or k, is `$k=2N\mu \times \frac{1}{2N}=\mu$`
-- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->that is, the substitution rate for neutral mutations equal the rate at which they appear. this is only true for neutral mutations!
+- Because of genetic drift, neutral mutations can become fixed, which we call "**substitutions**".
+	- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->what's the difference between "mutation" and "substitution"?
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->what's their relationship?
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Reasoning
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->Each generation `$2N\mu$` new mutations enter the population (<mark>why?</mark>, `$\mu$` denotes the mutation rate per locus per generation)
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->probability of fixation for a neutral mutation equals its initial frequency. for a new, neutral mutation, this is `$\frac{1}{2N}$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->therefore, the number of **fixed neutral mutations** per generation, which we will call "substitution rate", or k, is `$k=2N\mu \times \frac{1}{2N}=\mu$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->that is, the substitution rate for neutral mutations equal the rate at which they appear. this is only true for neutral mutations!
 </div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -1286,7 +1357,7 @@ then, `$p'=\dfrac{p^2w_{A/A}+\tfrac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\dfrac{pw_{
 <p class="fragment">
 <mark>Q: the speed of allele frequency change depends on ___?</mark>
 </p>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Forms of selection
@@ -1296,8 +1367,29 @@ then, `$p'=\dfrac{p^2w_{A/A}+\tfrac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\dfrac{pw_{
 1. &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Balancing selection
 	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->if the heterozygous class has higher fitness than either homozygous ones, selection would favor the **maintenance of both alleles**.
 	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->can you think of example scenarios for balancing selection?
-	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->are there other types of selection that can **maintain genetic diversity** rather than **eliminating it**?
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Example of balancing selection
+<split left="1" right="3">
+<img src="10-asset/11-attachment/20260528-Coop-fig10.13.png" alt="" style="width: 400px; object-fit: fill">
+
+
+- Soay sheep, found on the Soay island about 40 miles off the coast of Scotland
+
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->(Johnston _et al._ 2013) two alleles at the _RFXP2_ locus controls the **horn size**
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->_Ho<sup>+</sup>_: larger horn in males
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->_Ho<sup>p</sup>_: smaller horn in males
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->Larger horn = more success in mating for males
+- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->Little effect on female fitness
+</split>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Example of balancing selection
+From Graham Coop, Population and Quantitative Genetics, pp191 (Sep 2020)
+<img src="10-asset/11-attachment/20260528-Coop-fig10.12.png" alt="" style="object-fit: scale-down">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Signatures of positive selection
@@ -1321,7 +1413,7 @@ Introduction to Genetic Analysis, ed 11, Fig. 18-22
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ## Signatures of positive selection
-- By driving the favored allele to fixation "very fast", positive selection causes a selective sweep that ends up
+- When a favored allele is driven to fixation by positive selection, what happens to its **linked neutral variation**?
 	- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->also fix linked sites or drive the linked allele to high frequency
 	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->hence removing genetic variation from the population
 	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->creates LD
@@ -1332,19 +1424,19 @@ Introduction to Genetic Analysis, ed 11, Fig. 18-22
 ## Use selective sweep signature to infer positive selection
 
 <img src="10-asset/11-attachment/20240509-IntroGenetAnal-18-23.png" alt="" style="width: 600px; object-fit: fill">
+</div>
 
-
-
-
+<aside class="notes"><ul>
+<li>This gene influences the deposition of the melanin in the skin.</li>
+<li>Question: how does the level of diversity change as we move away from the gene?</li>
+</ul>
 <div class="footnotes" role="doc-endnotes">
 <ol>
 <li id="fn:1" role="doc-endnote" class="footnote"><p>
 
-Introduction to Genetic Analysis, ed 11, Fig. 18-23
-
+<p>Introduction to Genetic Analysis, ed 11, Fig. 18-23</p>
 </p></li></ol>
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 <img src="10-asset/11-attachment/20240509-IntroGenetAnal-table-8-6.png" alt="" style="object-fit: scale-down">

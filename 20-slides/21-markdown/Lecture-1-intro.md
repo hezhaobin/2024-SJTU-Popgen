@@ -493,7 +493,7 @@ note:
 
 <grid drag="85 45" drop="bottom" bg="forestgreen">
 
-- count the number of variable sites, or $k$
+- count the number of variable (segregating) sites, or $K$
 + account for the length of the region (sequence)
 + account for the number of sequences (sample size)
 + Average # of differences between two sequences
@@ -502,24 +502,46 @@ note:
 ---
 <!-- .slide: data-auto-animate -->
 ## How do you quantify the level of genetic variation?
-+ **Gene Diversity**
-	+ $G_D=1-\sum{p_i^2}=1-(p_1^2+p_2^2+p_3^2+...+p_n^2)$
-	+ =**Heterozygosity** (why? only applies to diploids)
-+ **Nucleotide Diversity**
-	+ probability that any nucleotide position is different between two randomly selected allele from a population.
-	+ like gene diversity, but calculated per nucleotide position and averaged
-	+ independent of length and more easily compared across species
+![[20240502-IntroGenetAnal-18-4.png|800]]
+
+<grid drag="85 45" drop="bottom" bg="forestgreen">
+
+- **Gene Diversity** = Prob(two randomly chosen alleles are the same)
++ $G_D=1-\sum{p_i^2}=1-(p_1^2+p_2^2+p_3^2+...+p_n^2)$
++ $G_D=1-\frac{1}{7}^2\times 5-\frac{2}{7}^2= 0.816$
++ =**Heterozygosity** (why? only applies to diploids)
+</grid>
 
 ---
 <!-- .slide: data-auto-animate -->
-## Level of genetic variation vary across species
+## How do you quantify the level of genetic variation?
+- **Gene Diversity** 
+	- $G_D=1-\sum{p_i^2}=1-(p_1^2+p_2^2+p_3^2+...+p_n^2)$
+	+ Doesn't tell us the number of differences
+
++ **Nucleotide Diversity** ($\pi$)
+	+ expected number of differences between two randomly chosen alleles.
+	+ often normalized by sequence length to produce per nucleotide levels.
+		+ probability that any nucleotide position is different between two randomly selected allele from a population.
+	+ $\mathbb{E}[\pi]=\theta=4N_e \mu$
+	+ $\hat{\theta_w}=\dfrac{K}{\alpha_n}$, where  $\alpha_n=\sum\limits_{i=1}^{n-1}\frac{1}{i}$
+
+---
+<!-- .slide: data-auto-animate -->
+## Puzzle about how genetic variation vary across species
+
+==Or the lack thereof==
+
 ![[20240505-Lefler-2012-fig1.png]]
+
+> [!warning] Genetic diversity levels vary mostly within 2 orders of magnitude, but we expect a lot more differences between species. ==Why==? 
+<!-- element class="fragment" -->
 
 Leffler et al. 2012. “Revisiting an Old Riddle: What Determines Genetic Diversity Levels within Species?” _PLoS Biology_ 10 (9): e1001388. [https://doi.org/10.1371/journal.pbio.1001388](https://doi.org/10.1371/journal.pbio.1001388).
 
 ---
 <!-- .slide: data-auto-animate -->
-## Level of genetic variation vary across species
+## Puzzle about how genetic variation vary across species
 <split even>
 <div>
 ![[20240204-Intro to Genetic Analysis 11th ed-fig-18-15.png]]
@@ -529,13 +551,33 @@ M. Lynch and J. S. Conery, Science 2003
 - neutral theory predicts the level of genetic diversity scales with the effective population size 
   
   $\theta=4N_e \mu$
-+ the range of genetic diversity in a sample of 167 species is 0.01%-8%
-+ this is likely several orders of magnitude smaller than the range of effective population size among species (think some vertebrate species with fewer than 100 breeding individuals vs plants or bacteria with a very large census population size)
++ The range of genetic diversity in a sample of 167 species is 0.01%-8%
++ How much does mutation rate $\mu$ (per nucleotide per generation) differ?
++ How much does "Effective" population size $N_e$ differ?
+
 
 </split>
 
 note:
 - diversity levels in the gibbon _Hoolock leuconedys_ are 0.21% for a current census population size estimate of 10,000–50,000 individuals (http://www.iucnredlist.org), whereas in _Drosophila buzzatii_, a species distributed worldwide, they are only ,10 times higher (1.94%) when population size estimates are on the same order per hectare [62]
++ this is likely several orders of magnitude smaller than the range of effective population size among species (think some vertebrate species with fewer than 100 breeding individuals vs plants or bacteria with a very large census population size)
+
+---
+<!-- .slide: data-auto-animate -->
+## Puzzle about how genetic variation vary across species
+
+![[20240509-IntroGenetAnal-table-18-5.png]]
+> [!warning] Mutation rate varies within ~2 orders of magnitude.
+
+
+---
+<!-- .slide: data-auto-animate -->
+## Puzzle about how genetic variation vary across species
+- How about effective population size, or, to an approximation, census population size?
+  
++ Some vertebrate species have fewer than 100 breeding individuals vs plants or bacteria with a very large census population size in the $10^{6}-10^{10}$
+	  
+	+ Diversity level in the gibbon _Hoolock leuconedys_ is 0.21% compared with 1.94% in _Drosophila buzzatii_, a species distributed worldwide. The former has a current census population size estimate of 10,000–50,000 individuals (http://www.iucnredlist.org), whereas the population size estimates for the latter are on the same order per hectare (10,000 m<sup>2</sup>)
 
 ---
 ## What forces drive biological evolution?
@@ -550,18 +592,18 @@ note:
 	4) recombination
 	5) selection
 
----
-## Mutation
-<split even>
-![[20240509-IntroGenetAnal-table-18-5.png|300x500]]
 
+---
+<!-- .slide: data-auto-animate -->
+## Mutation
 - Generates new alleles, hence the **ultimate source of genetic variation**.
+  
 + Mutations are **random** with respect to fitness.
 + Mutation rate ($\mu$) is usually low, $10^{-8}$ per nucleotide per generation in mammalian nuclear genomes. For a gene that is 1,000 bp long, it takes ~70,000 generations for 50% of the original allele to be mutated.
-+ data in human (circa 2009) gave an estimate of $\sim 3.0 \times 10^{-8}$ mutations/nucleotide/generation for a part of the Y-chromosome. if we extrapolate this to the entire human genome, we get an estimate of about 100 new mutations one would inherit from each of our parents _on average_.
-</split>
++ Data in human (circa 2009) gave an estimate of $\sim 3.0 \times 10^{-8}$ mutations/nucleotide/generation for a part of the Y-chromosome. if we extrapolate this to the entire human genome, we get an estimate of about 100 new mutations one would inherit from each of our parents _on average_.
 
 ---
+<!-- .slide: data-auto-animate -->
 ## Migration
 - In addition to mutation, migration is the other way by which new variation can be introduced into a population (not counting **new combinations**, see recombination)
 - when there is isolation by distance, migration (or gene flow) is a homogenizing force, preventing allele frequencies from diverging too far
@@ -624,8 +666,9 @@ note:
 ## Genetic drift and population size
 - When calculating the expected genotype frequency from allele frequencies under Hardy-Weinberg Equilibrium, we made a sneaky assumption - the population size is assumed to be so large that we can "sample with replacement".
   
-+ Real populations have finite population sizes. Sampling can lead to fluctuations in the allele frequency from generation to generation
-	+ let's consider an extreme case: a population consisting of a single heterozygous (A/a) individual (N=1) at generation $t_0$. What's the allele frequency at $t_0$?
++ Real populations have finite population sizes. Sampling can lead to fluctuations in the allele frequency from generation to generation, ==why==?
+	+ Consider an extreme case: a population consisting of a single heterozygous (A/a) individual (N=1) at generation $t_0$. What's the allele frequency at $t_0$?
+	  
 	+ suppose this species can self-fertilize, and that the population size remains at one in the next generation ($t_1$). what's the probability that the allele frequency will change (=="drift"==) to something other than its original value?
 	+ how about at generation $t_2$?
 	+ what happens when we increase the population size (N) to 2?
@@ -634,38 +677,36 @@ note:
 - at $t_2$, H = 1/4. In general, heterozygosity decays 
 - when N=1, there is a 50% chance that one of the two alleles will be fixed in the next generation. when N=2, the chance is 12.5%
 
+--
+<!-- .slide: data-auto-animate -->
+## Genetic drift and population size
+
+<span onclick="this.querySelector('.answer').style.display='inline'" style="cursor:pointer; border-bottom: 2px dashed gray">
+What's the consequence of genetic drift on genetic diversity? 
+<span class="answer" style="display:none; color:gold; margin-left:1em">Genetic drift reduces neutral genetic diversity as alleles slowly drift to high or low frequencies and get either fixed or lost.
+</span>
+</span>
+  
 ---
 <!-- .slide: data-auto-animate -->
 ## Genetic drift and population size
-- Genetic drift reduces neutral genetic diversity as alleles slowly drift to high or low frequencies and get either fixed or lost.
-  
-+ Genetic drift operates in both small and large populations, but its effect is more obvious in small populations (**why?** think of it as a force that scales with 1/2N)
++ Genetic drift operates in both small and large populations, but are its effect more or less obvious in small populations (**why?**)
 + Define $H$, or heterozygosity, as the probability that two randomly sampled alleles at generation t ($H_t$) are non-identical. Without mutation, $H$ decays with time at a "speed" that is inversely proportional to $N$.
 + $H_t = (1-\frac{1}{2N})^{t} H_0$
 + 1/2N << 1, $H_t = H_0 e^{-t/2N}$ (can you prove this?)
 
+note:
+
 ---
-<!-- .slide: data-auto-animate -->
-<grid drag="100 10" drop="1 1">
-## Genetic drift and population size
-</grid>
 
-<grid drag="45 80" drop="1 10" align="top">
-![[20250513-Jianzhi-lecture-genetic-drift-pic.png|500]]
-</grid>
+![[20250513-Jianzhi-lecture-genetic-drift-pic.png]]
 
-<grid drag="50 40" drop="-1 10" align="top">
-<dl>
-	<dt>Drift</dt>
-	<dd>any change in allele frequencies due to sampling error, not just loss or fixation of an allele</dd>
-</dl>
-</grid>
 
-<grid drag="50 40" drop="-1 35" align="top">
+note:
 + Drift is caused by sampling variation In a **finite population**.
++ Drift can be any change in allele frequencies due to sampling error, not just loss or fixation of an allele
 + When drift is operating, one can **calculate the probabilities of different outcomes**, but one **cannot accurately predict the outcome that will occur**
 + Drift **doesn't proceed in a specific direction**.
-</grid>
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -685,7 +726,7 @@ note:
 ## Genetic drift and population size
 
 ![[20240509-IntroGenetAnal-18-19a.png|800]][^1]
-+ Prob(an allele goes to fixation) ~ frequency in the present generation (why?)
++ Prob of an allele goes to fixation ~ frequency in the present generation (==why?==)
 + The initial frequency of a new allele in a diploid population of size N is $\frac{1}{2N}$
 + If N is even modestly large, e.g., $10^4$, the probability of its fixation is $5\times10^{-5}$, while the probability of it eventually being lost is close to 1.0 (diagram is misleading)!
 + When a new mutation is lucky enough to get fixed, it takes on average 4N generations.
@@ -697,7 +738,7 @@ note: most new mutations are lost; average time to fixation | fixed is 4N
 ---
 <!-- .slide: data-auto-animate -->
 ## Consequence of genetic drift
-> [!important] Slightly deleterious alleles may be driven to fixation, while beneficial mutations are subject to loss
+> [!warning] Slightly deleterious alleles may be driven to fixation, while beneficial mutations are subject to loss
 
 1) Strongly deleterious mutations are quickly lost. But slightly deleterious ones can drift to fixation - and when it does, it does so **quickly** (counterintuitive?)
 	+ do you know that the fate of a mutation is not only determined by its functional impact (beneficial or deleterious), but also population size?
@@ -711,12 +752,14 @@ note:
 ---
 <!-- .slide: data-auto-animate -->
 ## Molecular clock: implication of genetic drift
-- Because of genetic drift, neutral mutations can become fixed, which we call "substitutions".
-+ note the difference between "mutation" and "substitution"
-+ the number of mutations that are expected to "appear" in a population in one generation is proportional to the number of copies in the gene pool, i.e., $2N\mu$, where $\mu$ denotes the mutation rate per locus per generation.
-+ recall that the probability of fixation for a neutral mutation equals its initial frequency. for a new, neutral mutation, this is $\frac{1}{2N}$
-+ therefore, the number of **fixed neutral mutations** per generation, which we will call "substitution rate", or k, is $k=2N\mu \times \frac{1}{2N}=\mu$
-+ that is, the substitution rate for neutral mutations equal the rate at which they appear. this is only true for neutral mutations!
+- Because of genetic drift, neutral mutations can become fixed, which we call "**substitutions**".
+	+ what's the difference between "mutation" and "substitution"?
+	+ what's their relationship?
++ Reasoning
+	+ Each generation $2N\mu$ new mutations enter the population (==why?==, $\mu$ denotes the mutation rate per locus per generation)
+	+ probability of fixation for a neutral mutation equals its initial frequency. for a new, neutral mutation, this is $\frac{1}{2N}$
+	+ therefore, the number of **fixed neutral mutations** per generation, which we will call "substitution rate", or k, is $k=2N\mu \times \frac{1}{2N}=\mu$
+	+ that is, the substitution rate for neutral mutations equal the rate at which they appear. this is only true for neutral mutations!
 
 --
 <!-- .slide: data-auto-animate -->
@@ -877,7 +920,25 @@ then, $p'=\dfrac{p^2w_{A/A}+\tfrac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\dfrac{pw_{A
 2) Balancing selection
 	+ if the heterozygous class has higher fitness than either homozygous ones, selection would favor the **maintenance of both alleles**.
 	+ can you think of example scenarios for balancing selection?
-	+ are there other types of selection that can **maintain genetic diversity** rather than **eliminating it**?
+
+--
+## Example of balancing selection
+<split left="1" right="3">
+![[20260528-Coop-fig10.13.png|400]]
+
+- Soay sheep, found on the Soay island about 40 miles off the coast of Scotland
+
++ (Johnston _et al._ 2013) two alleles at the _RFXP2_ locus controls the **horn size**
+	+ _Ho<sup>+</sup>_: larger horn in males
+	+ _Ho<sup>p</sup>_: smaller horn in males
++ Larger horn = more success in mating for males
++ Little effect on female fitness
+</split>
+
+--
+## Example of balancing selection
+From Graham Coop, Population and Quantitative Genetics, pp191 (Sep 2020)
+![[20260528-Coop-fig10.12.png]]
 
 ---
 ## Signatures of positive selection
@@ -890,7 +951,7 @@ then, $p'=\dfrac{p^2w_{A/A}+\tfrac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\dfrac{pw_{A
 ---
 <!-- .slide: data-auto-animate -->
 ## Signatures of positive selection
-- By driving the favored allele to fixation "very fast", positive selection causes a selective sweep that ends up
+- When a favored allele is driven to fixation by positive selection, what happens to its **linked neutral variation**?
 	+ also fix linked sites or drive the linked allele to high frequency
 	+ hence removing genetic variation from the population
 	+ creates LD
@@ -902,6 +963,10 @@ then, $p'=\dfrac{p^2w_{A/A}+\tfrac{1}{2}\times2pqw_{A/a}}{\bar{w}}=p\dfrac{pw_{A
 ![[20240509-IntroGenetAnal-18-23.png|600x]]
 
 [^1]: Introduction to Genetic Analysis, ed 11, Fig. 18-23
+
+note:
+- This gene influences the deposition of the melanin in the skin.
+- Question: how does the level of diversity change as we move away from the gene?
 
 ---
 ![[20240509-IntroGenetAnal-table-8-6.png]]
