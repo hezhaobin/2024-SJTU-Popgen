@@ -1,3 +1,20 @@
+## 2026-05-28, time to fixation for neutral allele
+- 4N generations
+- students wanted to know why
+- refs
+	- Coop Population and Quantitative Genetics
+	- John Wakeley book [chapter 3](https://people.eecs.berkeley.edu/~jordan/sail/readings/wakeley-chapter3.pdf)
+	- Trevor Bedford short course on coalescence [slides](https://bedford.io/projects/sismid/sequences/coalescent.html#/)
+	- My own derivation on paper
+- key idea:
+	- $P(T_2=t)=p(1-p)^{t-1}$
+	- $\mathbb{E}[T_2]=2N$, because $T_2$ is geometrically distributed with $p=\frac{1}{2N}$
+	- when generalizing to $T_i$ for a sample of i alleles in a population of size N (diploids), one needs to make the assumption that $i \ll N$. Under this assumption, we can safely ignore multi-mergers (a single coalescence of three or more alleles, or more than one coalescence events in a single generation).
+	- Under the above assumptions, we can roughly think of the probability of a pair of alleles coalescing in a generation as $\binom{i}{2}\frac{1}{2N}$, where the first term comes from having so many pairs of alleles, each of which can independently coalesce (but still at a very small probability so that multi-mergers can be ignored)
+	- $\mathbb{E}[T_i]=2N/\binom{i}{2}$, and $T_i's$ are i.i.d.
+	- $\mathbb{E}[T_{MRCA}^{(n)}]=\mathbb{E}[\sum\limits_{i=2}^{n}T_i]=\sum\limits_{i=2}^{n}\mathbb{E}[T_i]=\sum\limits_{i=2}^{n}2N/\binom{i}{2}$
+	- After some rearrangement, one can show that the above becomes $\mathbb{E}[T_{MRCA}^{(n)}]=4N(1-\frac{1}{n})$
+	- Now is the a bit handwaving part: we let n approach 2N to get the time to fixation. Clearly, when n is no longer much smaller than N, we can not ignore the multi-merger events. That is, coalescence would happen more quickly closer to present. But these terms make very little contribution to the total anyways, and the answer is in the end a very good approximation.
 ## 2026-05-27, week 1 discussion, Novembre 2008
 - 李勉冲
 	- PCA, 

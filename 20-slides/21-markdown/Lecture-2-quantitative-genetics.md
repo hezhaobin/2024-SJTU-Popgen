@@ -12,19 +12,29 @@ css: css/custom.css
 ![[20250515-Lecture-2-quantitative-traits-Yao-Min.png|600]][^1]
 
 [^1]: https://artpictures.club/autumn-2023.html
+
 ---
+<!-- .slide: data-auto-animate -->
+## Quantitative Genetics
+> [!question] What does it study and what it doesn't?
+
++ Inheritance of quantitative traits and how they vary in a population
+
+---
+<!-- .slide: data-auto-animate -->
 ## Quantitative Genetics
 - Many traits have ==continuous variations==. These are known as ==quantitative traits==.
-+ Example:
-	+ plant height, days to maturity, seed yield, drought tolerance
-+ Some examples of Mendelian traits (binary or discontinuous)
-	+ pea color
-	+ In human: ability to taste phenylthiocarbamide, albinism, blood type etc.
++ Name some quantitative traits
++ Name examples of Mendelian traits (binary or discontinuous)
+
+note:
++ pea color
++ In human: ability to taste phenylthiocarbamide, albinism, blood type etc.
 
 ---
 <!-- .slide: data-auto-animate -->
 ### Is quantitative trait compatible with Mendelian Genetics?
-- When Mendelian genetics was rediscovered in the early 1900s, emphasis was placed on one to three loci segregating, creating discrete phenotypic categories. ==seems incompatible with continuously varying traits==
+- When Mendelian genetics was rediscovered in the early 1900s, emphasis was placed on one to three loci segregating, creating discrete phenotypic categories. ==seems incompatible with continuously varying traits== (**why?**)
 
 ---
 <!-- .slide: data-auto-animate -->
@@ -42,6 +52,8 @@ css: css/custom.css
 > In the early 1900s, William Bateson and George Yule suggested that continuous traits are governed by a combination of multiple Mendelian loci, each with a small effect on the trait, and environmental factors.
 
 + ==How would this work?==
++ If a trait is controlled by one locus with two alleles (A/a), how many possible trait values can we obtain?
++ How about two loci? Three? Ten?
 
 --
 ### Multifactorial Hypothesis: one locus
@@ -63,14 +75,17 @@ css: css/custom.css
 
 ---
 ### Define the "genetic architecture" of a quantitative trait
++ **Genetic architecture**: description of all of the genetic factors that influence a trait
+	+ ==property of a specific population, can vary among populations== (**why?**)
+	  
+	+ different alleles segregate in different pops, and different populations experience different environments.
++ **Types of traits and inheritance** (below)
+
+note:
 - Quantitative traits that are controlled by multiple genes --> "polygenic", often associated with "complex trait/disease"
 + Understanding the inheritance of complex traits is one of the most important challenges facing geneticists in the twenty-first century
-+ **Genetic architecture**: description of all of the genetic factors that influence a trait
-	+ ==property of a specific population, can vary among populations==
-	  
-	+ different alleles segregate in different pops, and different pops experience different environments.
 
----
+--
 <!-- .slide: data-auto-animate -->
 ### Types of traits and inheritance
 - **Continuous trait** is one that can take on a potentially infinite number of states over a continuous range, e.g., human height.
@@ -79,7 +94,7 @@ css: css/custom.css
 + **Categorical trait** is one where individuals in a population can be sorted into discrete categories, e.g., purple vs white flower or tall vs short stems in Mendel's pea plants.
 	+ ==typically controlled by one or two genes==, hence exhibiting simple inheritance
 
----
+--
 <!-- .slide: data-auto-animate -->
 ### Types of traits and inheritance
 - **Threshold trait**: often used in medical genetics, where individuals are classified into "disease" and "non-disease" groups, e.g., diabetes
@@ -104,7 +119,6 @@ $\sigma_X^2=E[(X-\mu)^2]=E[X^2]-E[X]^2$
 $\sigma_X^2=\frac{1}{n}\sum{(X_i-\bar{X})^2}$
 
 $s_X^2=\frac{1}{n-1}\sum{(X_i-\bar{X})^2}$
-
 
 
 ---
@@ -134,13 +148,17 @@ note:
 ---
 <!-- .slide: data-auto-animate -->
 ### A simple genetic model for quantitative traits
-- What is a (mathematical) model?
-	+ simplified representation of a complex phenomenon.
-	+ can differ in complexity 
-		+ $volume=f(time)$
-		+ $volume=f(rate\times time)$
-	+ more complex = better?
-+ A simple genetic model for Yao's height
+> [!summary] **What is a (mathematical) model?**
+> + simplified representation of a complex phenomenon.
+> + can differ in complexity 
+> 	+ $volume=f(time)$
+> 	+ $volume=f(rate\times time)$
+> + more complex = better?
+
+---
+<!-- .slide: data-auto-animate -->
+### A simple genetic model for quantitative traits
+- A simple genetic model for Yao's height
 	+ 229 cm, 59 cm taller than an average man in Shanghai
 	+ $X=\bar{X}+g+e$
 	+ $x=g+e=59 cm$
@@ -154,18 +172,21 @@ note:
 ---
 ### A simple genetic model for quantitative traits
 ![[20250520-IntroGenetAnal-table-19-2-annotated.png]]
+
 ---
 ![[20250520-IntroGenetAnal-table-19-2-annotated.png]]
 
-- $X=\bar{X}+g+e$
+- $X=\bar{X}+g+e$, 
 + $62=70-6-2$
++ How to calculate $V_X$, $V_g$ and _$V_e$?
 
 ---
 ### Genetic and Environment Variances
-- $Var(X+Y) = Var(X)+Var(Y)$, when is this true?
-+ $Var(X)=Var(\bar{X}+g+e)=0+V_g+V_e$
+- Let $x=X-\bar{X}=g+e$
++ $V[x]=E[x^2]-E[x]^2=E[(g+e)^2]+0$
++ $V[x]=E[g^2+e^2+2ge]=V_g+V_e+2COV_{ge}$
 + What if genetic and environmental factors are not independent?
-+ Introduct **Covariance**
++ Introduce **Covariance**
 
 ---
 ## Covariance
@@ -191,7 +212,7 @@ note:
 - Statistically, **correlation**, or **dependence**, is any statistical non-independent relationship between two random variables.
 	+ although "correlation" may indicate any type of relationship, a _linear relationship_ is often implied.
 + There are many ways to measure the strength of correlation. The most common one is the **Pearson's correlation coefficient**, often written as $\rho$
-	+ $\rho_{X,Y}=\frac{cov(X,Y)}{\sigma_X \sigma_Y}=\frac{cov(X,Y)}{\sqrt{V_X V_Y}}=\frac{E[(X-E[X])(Y-E[Y])]}{\sqrt{V_X V_Y}}$
+	+ $\rho_{X,Y}=\dfrac{cov(X,Y)}{\sigma_X \sigma_Y}=\dfrac{E[(X-E[X])(Y-E[Y])]}{\sqrt{V_X V_Y}}$
 	+ "normalized covariance", independent of the variance scales
 	+ if $g$ and $e$ are correlated, we cannot use $V_X=V_g+V_e$
 --
@@ -206,7 +227,7 @@ note:
 ### Broad-sense Heritability
 - How much of the variation in a population is due to genetic factors and how much to environmental factors?
 + Define **broad-sense heritability ($H^2$)**: 
-	+ $H^2=\frac{V_g}{V_X}$
+	+ $H^2=\dfrac{V_g}{V_X}$
 	+ "broad sense" because it encompasses several ways by which genes contribute to variation, including **additive** and **epistatic** effects.
 + How to estimate broad-sense heritability?
 ---
@@ -214,6 +235,16 @@ note:
 ### Broad-sense Heritability
 - In experimental model organisms, one can estimate $H^2$ using **inbred lines**. By rearing many genetically identical individuals from each inbred line in randomly assigned environments, one can tease apart the genetic vs environmental variance.
 + In humans, one can use **twin studies** to estimate broad sense heritability.
+
+---
+![[20250520-IntroGenetAnal-table-19-2-raw.png]]
+
++ **Experiment I**
+	+ $V_g=12.0$, $V_X=14.67$ (unit: days^2), what is $H^2$?
++ **Experiment II**
+	+ $V_g=12.0$, $V_e=24$ (unit: days^2), what is $H^2$?
++ Same inbred lines, different $H^2$, ==why==?
+
 ---
 <!-- .slide: data-auto-animate -->
 ### Measuring heritability in humans using twin studies
@@ -227,12 +258,16 @@ note:
 ### Measuring heritability in humans using twin studies
 - $cov(x', x'')=E[x'x'']=E[(g+e')(g+e'')]$
 + $cov(x', x'')=E[g^2]+E[ge']+E[ge'']+E[e'e'']$
-	+ $E[g^2]=V_g$
-	+ $E[ge']=E[ge'']=0$, (no correlation between genotype and environment)
-	+ $E[e'e'']=0$ as the twins are randomly assigned to families;
-	+ Hence, $cov(x', x'')=V_g$
-+ $H^2=\frac{V_g}{V_X}=\frac{cov(x',x'')}{V_X}=\frac{cov(x',x'')}{\sqrt{V_{X'}V_{X''}}}=r_{X',X''}$
-	+ $H^2$==is equivalent to the correlation between (monozygotic) twins==.
++ $cov(x', x'')=E[g^2]+0=V_g$
++ $H^2=\frac{V_g}{V_x}=\frac{cov(x',x'')}{V_x}=\frac{cov(x',x'')}{\sqrt{V_{x'}V_{x''}}}=r_{x',x''}$
++ $H^2$ ==is equivalent to the correlation between (monozygotic) twins==.
+
+note:
++ $E[g^2]=V_g$
++ $E[ge']=E[ge'']=0$, (no correlation between genotype and environment)
++ $E[e'e'']=0$ as the twins are randomly assigned to families;
++ Hence, $cov(x', x'')=V_g$
+
 ---
 <grid drag="50 80" drop="1 1" align="top">
 <table>
@@ -279,5 +314,30 @@ $H^2=\frac{119.2}{154.3}=0.77$
 </grid>
 
 <grid drag="50 100" drop="-1 1">
-![[20250521-IntroGenetAnal-table-19-4.png|350]]
+![[20250521-IntroGenetAnal-table-19-4.png|400]]
 </grid>
+
+---
+<!-- .slide: data-auto-animate -->
+## Narrow-Sense Heritability
+
+> [!question] Why do we need another measure of heritability?
+> + In diploid populations, parents pass on alleles or genotypes?
+> + What is dominance? epistasis? Are they transmitted from parents to offspring?
+
++ **Additive Genetic Variance**
+	+ the "additive effect" of an allele is defined as its **average effect** when it is paired with random alleles at its own locus and expressed across all possible genetic backgrounds (all possible alleles at other loci) in the population
+
+---
+<!-- .slide: data-auto-animate -->
+## Narrow-Sense Heritability
+- $V_X=V_a+V_d+V_i+V_e$
+  
+	can get more complex with **G x E** interactions
++ $h^2=\dfrac{V_a}{V_X}$
+  
+	useful because it predicts how well a trait responds to selection (for breeders, and also in agriculture and conservation) <!-- element class="fragment" -->
+	
+	Can be estimated using parent-offspring correlation or half-sibs. <!-- element class="fragment" -->
+	
+	$h^2=\dfrac{V_a}{V_X}=\dfrac{2COV_{P,O}}{V_X}$ <!-- element class="fragment" -->
