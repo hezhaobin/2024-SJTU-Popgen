@@ -1,3 +1,7 @@
+## 2026-06-02, second week class
+- Monday class almost ran out of materials to teach
+	- Can add a bit more material next time - maybe GWAS can be included.
+	- 
 ## 2026-05-28, time to fixation for neutral allele
 - 4N generations
 - students wanted to know why
