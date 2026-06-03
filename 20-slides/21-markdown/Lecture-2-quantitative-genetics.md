@@ -341,3 +341,72 @@ $H^2=\frac{119.2}{154.3}=0.77$
 	Can be estimated using parent-offspring correlation or half-sibs. <!-- element class="fragment" -->
 	
 	$h^2=\dfrac{V_a}{V_X}=\dfrac{2COV_{P,O}}{V_X}$ <!-- element class="fragment" -->
+
+---
+
+<!-- .slide: data-auto-animate -->
+## QTL mapping
+![[20260603-IntroGenetAnal-19-12.png]]
+[^1]
+
+[^1]:  Introduction to Genetic Analysis, ed 11, Fig. 19-12
+---
+<!-- .slide: data-auto-animate -->
+## QTL Mapping
+![[20260603-IntroGenetAnal-table-19-6.png]][^1]
+
+[^1]:  Introduction to Genetic Analysis, ed 11, Table 19-6
+
+---
+
+<!-- .slide: data-auto-animate -->
+## QTL Mapping
+<split left="1" right="2">
+<div>
+![[20260603-IntroGenetAnal-19-13.png]]
+
+Introduction to Genetic Analysis, ed 11, Fig. 19-13
+</div>
+
+- $odds=\dfrac{\text{Prob(data|QTL)}}{\text{Prob(data|no QTL})}$
++ $\text{Prob(data|QTL)}=0.1$
++ $\text{Prob(data|no QTL)}=0.001$
++ $odds=0.1/0.001=100$
++ $\log_{10}{odds}=2.0$ -- **"LOD" score**
+
+</split>
+
+---
+<!-- .slide: data-auto-animate -->
+## QTL Mapping
+![[20260603-IntroGenetAnal-19-14.png]] 
+[^1]
+
+[^1]: Introduction to Genetic Analysis, ed 11, Fig. 19-14
+
+---
+<!-- .slide: data-auto-animate -->
+
+> [!quote] GWAS 
+> Genome-wide association studies (GWAS) test hundreds of thousands of genetic variants across many genomes to find those statistically associated with a specific trait or disease. ...
+
+Uffelmann _et al._ 2021 Nat Rev Methods Primers
+
+---
+> [!warning] GWAS
+> If you have read a news report recently announcing that researchers have identified a susceptibility gene for autism, diabetes, hypertension, or some other disorder, there is an excellent chance that the gene was discovered using the technique
+
+Introduction to Genetic Analysis, ed 11, p749
+
+---
+> [!question] How does GWAS relate to and differ from QTL?
+> + Both are aimed at discovering genetic basis for traits.
+> + QTL (most commonly) tests two parental genotypes (four alleles) while GWAS tests _many_ alleles in a population.
+> + QTL involves controlled cross; GWAS relies on historical recombination and LD.
+> + One exert much more control in QTL than in GWAS, which can be plagued by population structure, selection, non-genetic factors etc.
+
+---
+ ![[20260603-IntroGenetAnal-19-19.png]]
+ [^1]
+
+[^1]: Introduction to Genetic Analysis, ed 11, Fig. 19-19

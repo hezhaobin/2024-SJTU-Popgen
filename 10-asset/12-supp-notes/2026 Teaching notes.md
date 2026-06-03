@@ -1,3 +1,7 @@
+## 2026-06-03, second week JC
+- 高鹏竣
+	- 数学模型的用途？
+	- 
 ## 2026-06-02, second week class
 - Monday class almost ran out of materials to teach
 	- Can add a bit more material next time - maybe GWAS can be included.
