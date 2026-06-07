@@ -349,13 +349,13 @@ $H^2=\frac{119.2}{154.3}=0.77$
 ![[20260603-IntroGenetAnal-19-12.png]]
 [^1]
 
-[^1]:  Introduction to Genetic Analysis, ed 11, Fig. 19-12
+[^1]: Introduction to Genetic Analysis, ed 11, Fig. 19-12
 ---
 <!-- .slide: data-auto-animate -->
 ## QTL Mapping
 ![[20260603-IntroGenetAnal-table-19-6.png]][^1]
 
-[^1]:  Introduction to Genetic Analysis, ed 11, Table 19-6
+[^1]: Introduction to Genetic Analysis, ed 11, Table 19-6
 
 ---
 
